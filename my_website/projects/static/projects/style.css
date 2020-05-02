@@ -159,22 +159,22 @@ a uniform hover color when pressed or clicked*/
 }
 
 .pimgintro {
-    background-image:url(lap1_small.jpg);
+    background-image:url(computer1.jpg);
     min-height: 600px;
 }
 
 .pimg1 {
-    background-image:url(p1.jpg);
+    background-image:url(proj1-website.jpg);
     min-height: 400px;
 }
 
 .pimg2 { /*This one is flickering and unreliable, maybe something with Chrome*/
-    background-image:url(sunset.jpg);
+    background-image:url(proj2-TBD.jpg);
     min-height: 400px;
 }
 
 .pimg3 {
-    background-image:url(sunset2.jpg);
+    background-image:url(proj3-TBD.jpg);
     min-height: 400px;
 }
 
@@ -443,7 +443,7 @@ fields to match the hover color for the buttons*/
 }
 
 .success-img {
-  background-image:url(lap5.jpg);
+  background-image:url(laptop1.jpg);
   /*opacity:0.70; *//*fades the images out if needed*/
   color: #000000;
   background-size:cover;
