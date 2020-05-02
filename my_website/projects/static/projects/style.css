@@ -164,7 +164,7 @@ a uniform hover color when pressed or clicked*/
 }
 
 .pimg1 {
-    background-image:url(proj1-website.jpg);
+    background-image:url(laptop2.jpg);
     min-height: 400px;
 }
 
@@ -400,6 +400,17 @@ a uniform hover color when pressed or clicked*/
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
+.github-logo-light{
+  background-color: #FFFFFF;
+  border: none;
+  color: #000000;
+  cursor: pointer;
+  position: relative;
+  height: 58px;
+  width: 150px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
 .fab {
   font-size: 35px;
   position: absolute;
@@ -408,7 +419,7 @@ a uniform hover color when pressed or clicked*/
   transform: translate(-50%, -50%);
 }
 
-.github-logo>span {
+.github-logo>span, .github-logo-light>span {
   font-size: 16px;
   position: absolute;
   top: 0%;
@@ -416,7 +427,46 @@ a uniform hover color when pressed or clicked*/
   transform: translate(-50%, 50%);
 }
 
-.github-logo:hover {
+.github-logo:hover, .github-logo-light:hover {
+  background: #9AC4E8;
+  color: #000000;
+}
+
+/**************************************************************************/
+/*ICONS*/
+/**************************************************************************/
+
+#icon1, #icon2, #icon3, #icon4, #icon5, #icon6, #icon7  {
+  display:none;
+}
+
+.icon-height{
+  height: 58px;
+  padding: 10px 50px;
+}
+
+.icon-logo{
+  background: url(dj.jpg);
+  border: none;
+  color: #FFFFFF;
+  cursor: pointer;
+  position: relative;
+  padding: 25px;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+/*.ico {
+  font-size: 35px;
+  position: absolute;
+  top: 50%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+}*/
+
+.icon-logo:hover {
   background: #9AC4E8;
   color: #000000;
 }
