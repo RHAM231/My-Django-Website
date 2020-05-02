@@ -1,0 +1,55 @@
+{% extends "projects/base.html" %}
+{% load static %}
+
+{% block content %}
+
+
+<div class="row justify-content-center">
+<section class="col-sm-10 col-md-8 col-lg-6 py-3 my-auto">
+    <h2 class="my-auto">Web Design Checklist</h2>
+
+    <div class="checklist">
+        {% for header in headers %}
+            <h3>{{ header.name }}</h3>
+            <ul class="check">
+            {% for entry in header.entry_key.all %}
+                <li>
+                    <input id="check{{ forloop.counter }}" type="checkbox">
+                    <label for="check{{ forloop.counter }}">{{ entry.name }}</label>
+                </li>
+            {% empty %}
+                No Entries
+            {% endfor %}
+            </ul>
+        {% endfor %}
+    </div>
+
+    <h3>Useful Links</h3>
+    <ul>
+        <li><a href="https://www.toptal.com/django/django-top-10-mistakes">
+            Top 10 Mistakes that Django Developers Make</a></li>
+        <li><a href="https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/">
+            Django Documentation: Deployment checklist</a></li>
+        <li><a href="https://css-tricks.com/strategies-for-cache-busting-css/">
+            Strategies for Cache-Busting CSS</a></li>
+    </ul>
+
+    <h3>Style Guides Used</h3>
+
+    <div class="linklist">
+        {% for header in linkheaders %}
+            <h5>{{ header.name }}</h5>
+            <ul class="">
+            {% for item in header.link_key.all %}
+                <li><a href="{{ item.link }}">{{ item.name }}</a></li>
+            {% empty %}
+                No Entries
+            {% endfor %}
+            </ul>
+        {% endfor %}
+    </div>
+
+</section>
+</div>
+
+{% endblock content %}

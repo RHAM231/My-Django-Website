@@ -1,0 +1,43 @@
+{% extends "projects/base.html" %}
+{% load static %}
+
+{% block content %}
+
+<div class="container py-5 px-5">
+    <div class="row d-flex justify-content-center">
+        <h1>Get In Touch</h1>
+    </div>
+    <div class="row d-flex justify-content-center py-2">
+        <p>Email me at <a href="mailto:nogardjmj@gmail.com">nogardjmj@gmail.com</a> or use the form below</p>
+    </div>
+    <div class="row d-flex justify-content-center">
+        <div class="col-sm-6 col-md-8 col-lg-6 border-top border-dark py-2"></div>
+    </div>
+
+    <form action="/contact/" method="post">
+        {% csrf_token %}
+
+        {% for field in form %}
+        <div class="form-row d-flex justify-content-center">
+            <div class="col-sm-6 col-md-8 col-lg-6 py-2">
+                <div class="fieldWrapper">
+                    {{ field.errors }}
+                    {{ field }}
+                    {% if field.help_text %}
+                    <p class="help">{{ field.help_text|safe }}</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+
+        <div class="row d-flex justify-content-center">
+            <div class="col-sm-6 col-md-8 col-lg-6 border-bottom border-dark py-2"></div>
+        </div>
+        <div class="row d-flex justify-content-center py-4">
+            <input type="submit" value="Send" class="frm-btn">
+        </div>
+    </form>
+</div>
+
+{% endblock content %}

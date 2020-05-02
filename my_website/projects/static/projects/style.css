@@ -1,0 +1,577 @@
+/**************************************************************************/
+/*TABLE OF CONTENTS*/
+/**************************************************************************/
+
+/*
+LINE ## - WEBSITE BODY, FONT, WRAPPER
+LINE ## - HEADER
+LINE ## - FOOTER
+LINE ## - BUTTONS
+LINE ## - PARALLAX CONTENT
+LINE ## - ABOUT ME
+LINE ## - CONTACT ME PAGE
+LINE ## - CHECKLIST PAGE
+LINE ## - OTHER
+*/
+
+/**************************************************************************/
+/*WEBSITE BODY, FONT, WRAPPER*/
+/**************************************************************************/
+body, html {
+    background: #282e34;/* *//**//*this is set by the wrapper below*/
+    height: 100%;
+    margin: 0;
+    font-size: 16px;
+    font-family: sans-serif;
+    font-weight: 400;
+    line-height: 1.8em;
+    color: #232629;
+}
+
+/* Colors from main image */
+/*#000000, black*/
+/*#FF9B3D, orange*/
+/*#D5D0D7, grey*/
+/*#B84032, redish orange*/
+/*#5D3655, purple*/
+/*#C02E21, red*/
+/*#221713, dark grey*/
+/*#C861B4, violet*/
+/*-----------------*/
+
+.wrapper {
+/*    background: radial-gradient(#A9AFB3, #8E9397);*/
+    background: #E6EAED; /*#A1C2DF, #E6EAED, #D3E3F1, #f4f4f4, #00B9CD, #D5D0D7, #221713, #68543d, #A9AFB3, #E86618
+#ECBA67, #EBE0A8, #CDB689, #AB612D, #e1d29c, #191919 */
+    /*background: #73787D;*/
+    overflow: auto;
+    min-height: 100%;
+}
+
+/**************************************************************************/
+/*HEADER*/
+/**************************************************************************/
+
+.navbar {
+  background: #000000;
+  margin-top: 0;
+  padding:0px;
+}
+
+.navbar-brand{
+  color: #E7EAED;
+/*  height: 56px;*/
+  width: 56px;
+  padding:0px 12px;
+  margin: 0px;
+  line-height: 56px;
+}
+
+/*Adds margin for the dropdown menu for mobile*/
+.navbar-collapse{
+  margin: 0px 20px;
+}
+
+.navbar-brand:hover{
+  background: #9AC4E8;
+  color: #000000;
+}
+
+/*Styles the navbar links. line-height used to vertically center text*/
+.nav-link{
+  color: #E7EAED;
+  line-height: 40px;
+}
+
+.nav-link:hover{
+  color: #000000;
+  background: #9AC4E8;
+}
+
+/*Hides Bootstrap's built in elements behind the .fas icon below
+by setting all the height and widths to the same size. This ensures
+a uniform hover color when the toggler is pressed or clicked*/
+.navbar-toggler{
+  margin: 0px 0px;
+  padding: 0px 0px;
+  height: 56px;
+  width: 56px;
+  border: none; /*Border removed to avoid alignment issue*/
+}
+
+/*Hides Bootstrap's built in elements behind the .fas icon below
+by setting all the height and widths to the same size. This ensures
+a uniform hover color when pressed or clicked*/
+.navbar-toggler-icon{
+  height: 56px;
+  width: 56px;
+}
+
+/*Removes Bootstrap's default blue outline from the toggler*/
+.navbar-toggler:focus,.navbar-toggler:active {
+   outline: none;
+   box-shadow: none;
+}
+
+/*Styles the toggler icon for the navbar*/
+.fas{
+  background: #000000; /*#000000, #E7EAED*/
+  font-size: 24px;
+  line-height: 56px;
+  margin: 0px 0px;
+  height: 56px;
+  width: 56px;
+  vertical-align: middle;
+  color: #E7EAED;
+}
+
+/*Sets the hover style for the toggler*/
+.fas:hover{
+  background: #9AC4E8;
+  color: #000000;
+}
+
+/*Styles the dropdown menu opened by the toggler to match the navbar */
+.dropdown-menu{
+  background: #000000;
+}
+
+.dropdown-item{
+  color: #E7EAED;
+}
+
+.dropdown-item:hover{
+  background: #9AC4E8;
+  color: #000000;
+}
+
+/**************************************************************************/
+/*PARALLAX CONTENT*/
+/**************************************************************************/
+
+.pimgintro, .pimg1, .pimg2, .pimg3 {
+    position:relative;
+    /*opacity:0.70;*/ /*fades the images out if needed*/
+    background-position:center;
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+}
+
+.pimgintro {
+    background-image:url(lap1_small.jpg);
+    min-height: 600px;
+}
+
+.pimg1 {
+    background-image:url(p1.jpg);
+    min-height: 400px;
+}
+
+.pimg2 { /*This one is flickering and unreliable, maybe something with Chrome*/
+    background-image:url(sunset.jpg);
+    min-height: 400px;
+}
+
+.pimg3 {
+    background-image:url(sunset2.jpg);
+    min-height: 400px;
+}
+
+.section{
+    text-align:center;
+    padding:50px 80px;
+}
+
+.section-light{
+    background-color: #E7EAED;
+    color: #000000;
+}
+
+.ptext {
+    width:100%;
+    text-align:center;
+    color:#FFFFFF; /*#172027, #FF9B3D, #FFFFFF*/
+    font-size:20px;
+    letter-spacing:8px;
+    text-transform:uppercase;
+}
+
+.ptext-sub {
+    text-align:center;
+    color:#FFFFFF;
+    font-size:14px;
+    letter-spacing:2px;
+}
+
+/*.ptext .border{
+    background-color:#111;
+    color:#fff;
+    padding:20px;
+}
+
+.ptext .border.trans{
+    background-color:transparent
+}*/
+
+@media(max-width:568px){
+    .pimg1, .pimg2, pimg3{
+    background-attachment:scroll;
+    }
+}
+
+.project-link {
+    text-decoration: none;
+    color: #000;
+}
+
+.project-link:hover {
+    color: #cccccc;
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.25);
+}
+
+/**************************************************************************/
+/*ABOUT ME*/
+/**************************************************************************/
+
+/* .line-top{
+*//*    width: 1110px;*//*
+    height: 1px;
+    border-bottom: 1px solid black;
+    padding: 25px;
+    margin: 0 auto;
+}
+
+.line-bottom{
+*//*    width: 1110px;*//*
+    height: 1px;
+    border-top: 1px solid black;
+    padding: 25px;
+    margin: 0 auto;
+}*/
+
+@media(max-width:1199px){
+    .line-top, .line-bottom {
+        width: 950px;
+    }
+}
+
+@media(max-width:1023px){
+    .line-top, .line-bottom {
+        width: 900px;
+    }
+}
+
+@media(max-width:767px){
+    .line-top, .line-bottom {
+        width: 400px;
+    }
+}
+
+@media(max-width:479px){
+    .line-top, .line-bottom {
+        width: 340px;
+    }
+}
+
+.p-info {
+    line-height: 1pt;
+}
+
+.profile-img {
+    width: 80%;
+    border:2px;
+    border-color:black;
+    border-style:solid;
+}
+
+.card1 {
+    background:#495C6D;
+    height:480px;
+    width:330px;
+    padding: 25px;
+    margin: 0 auto;
+/*    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -240px 0 0 -165px;*/
+}
+
+.card-border {
+  background:#A9AFB3;
+  height:530px;
+  width:380px;
+  margin:auto;
+  border:50px;
+  border-color:#1F85DE;
+}
+
+/**************************************************************************/
+/*LINK BUTTON*/
+/**************************************************************************/
+
+.link-btn {
+  background-color: #000000; /*#211F1F, #942113, #E7EAED*/
+  border: none;
+  color: #FFFFFF;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  width: 150px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.link-btn:hover {
+  background-color: #9AC4E8; /*#E7EAED, #E2A373*/
+  color: #FFFFFF; /*#cccccc, #FF9B3D*/
+  text-decoration: none;
+}
+
+/**************************************************************************/
+/*BUTTONS ON ABOUT ME PAGE*/
+/**************************************************************************/
+
+.abt-btn {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #232629; /*#232629, #0A5291*/
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.abt-btn:hover {
+  background-color: #555;
+}
+
+/**************************************************************************/
+/*FORM SUBMIT BUTTON*/
+/**************************************************************************/
+
+.frm-btn {
+  background-color: #000000; /*#211F1F, #942113, #E7EAED*/
+  border: none;
+  color: #FFFFFF;
+  padding: 15px 32px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  width: 150px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.frm-btn:hover {
+  background-color: #9AC4E8;
+  color: #FFFFFF;
+}
+
+/*Removes Bootstrap's default blue outline from the button*/
+.frm-btn:focus, .frm-btn:active {
+   outline: none;
+   box-shadow: none;
+}
+
+/**************************************************************************/
+/*CUSTOM GITHUB BUTTON*/
+/**************************************************************************/
+
+#logo {
+  display:none;
+}
+
+.github-logo2{
+  height: 58px;
+}
+
+.github-logo{
+  background-color: #000000;
+  border: none;
+  color: #FFFFFF;
+  cursor: pointer;
+  position: relative;
+  height: 58px;
+  width: 150px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.fab {
+  font-size: 35px;
+  position: absolute;
+  top: 50%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+}
+
+.github-logo>span {
+  font-size: 16px;
+  position: absolute;
+  top: 0%;
+  left: 35%;
+  transform: translate(-50%, 50%);
+}
+
+.github-logo:hover {
+  background: #9AC4E8;
+  color: #000000;
+}
+
+/**************************************************************************/
+/*CONTACT ME PAGE*/
+/**************************************************************************/
+
+/*Adds custom styling to form fields*/
+#id_name, #id_sender, #id_subject, #id_message {
+  background: #FFFFFF;
+  border: none;
+  border-radius: 0px;
+  box-shadow: 0 6px 12px 0 rgba(0,0,0,0.2), 0 5px 15px 0 rgba(0,0,0,0.19);
+}
+
+/*Changes the color of Bootstrap's on-click blue outline for the form
+fields to match the hover color for the buttons*/
+#id_name:focus, #id_name:active,
+#id_sender:focus, #id_sender:active,
+#id_subject:focus, #id_subject:active,
+#id_message:focus, #id_message:active {
+  box-shadow: 0 0 0 0.2rem rgba(154, 196, 232, 0.7);
+}
+
+.success-img {
+  background-image:url(lap5.jpg);
+  /*opacity:0.70; *//*fades the images out if needed*/
+  color: #000000;
+  background-size:cover;
+  background-position:center;
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  /*justify-content:center;
+  align-items:center;
+  text-align:center;*/
+  padding:0 20px;
+}
+
+.stext {
+    width:100%;
+    text-align:center;
+    color:#FFFFFF;
+    font-size:20px;
+    letter-spacing:8px;
+    text-transform:uppercase;
+}
+
+.contrast {
+  background: #000000;
+  /*opacity:0.70; fades the images out if needed*/
+}
+
+/**************************************************************************/
+/*CHECKLIST PAGE*/
+/**************************************************************************/
+
+/*Sets checklist margin on the web checklist page
+hides the default checklist button*/
+.check {
+  padding-left: 1rem;
+  list-style-type: none;
+}
+
+.check label {
+  display : inline;
+  padding-right : 4px;
+}
+
+.check input {
+  margin-top : 4px;
+}
+
+/**************************************************************************/
+/*FOOTER*/
+/**************************************************************************/
+
+/*Sets footer size and color*/
+.footer {
+    background: #000000; /*#282e34, */
+    height: 100px;
+}
+
+/*Sets footer text color and centers it*/
+footer .footer-text {
+    color: #FFFFFF; /*#FFFFFF*/
+    text-align: center;
+}
+
+/*Sets link text colors and centers them*/
+footer .footer-link {
+    color: #FFFFFF; /*#000000, #FFFFFF*/
+    text-align: center;
+}
+
+/*Sets the hover effect for the link*/
+footer .footer-link:hover {
+  color: #000000; /*#000000, #FFFFFF*/
+  text-decoration: none;
+  background: rgba(255, 100, 0, 0.25);
+}
+
+/**************************************************************************/
+/*OTHER
+/**************************************************************************/
+
+
+.logo {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+
+/* Three columns side by side */
+.profile-card {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.background-card {
+  float: left;
+  width: 66.6%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+/* Display the columns below each other instead of side by side on small screens */
+@media screen and (max-width: 650px) {
+  .profile-card, .background-card {
+    width: 100%;
+    display: block;
+  }
+}
+
+/* Add some shadows to create a card effect */
+.card-custom {
+  background:#E7EAED; /*#FF9B3D, #E7EAED*/
+/*  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);*/
+}
+
+/* Some left and right padding inside the container */
+.container {
+  padding: 0 16px;
+}
+
+/* Clear floats */
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
