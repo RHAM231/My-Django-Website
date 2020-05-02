@@ -457,18 +457,20 @@ fields to match the hover color for the buttons*/
   padding:0 20px;
 }
 
+/*Styles the success text on the contact success page*/
 .stext {
     width:100%;
     text-align:center;
-    color:#FFFFFF;
+    color:#000000;
     font-size:20px;
     letter-spacing:8px;
     text-transform:uppercase;
 }
 
+/*Creates background contrast for .stext above. */
 .contrast {
-  background: #000000;
-  /*opacity:0.70; fades the images out if needed*/
+  background: rgb(255, 255, 255);
+  background: rgba(255, 255, 255, 0.5);
 }
 
 /**************************************************************************/
