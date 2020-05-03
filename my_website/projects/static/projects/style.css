@@ -436,29 +436,73 @@ a uniform hover color when pressed or clicked*/
 /*ICONS*/
 /**************************************************************************/
 
-#icon1, #icon2, #icon3, #icon4, #icon5, #icon6, #icon7  {
+#icon-label1, #icon-label2, #icon-label3,
+#icon-label4, #icon-label5, #icon-label6,
+#icon-label7, #icon-label8, #icon-label9,
+#icon-label10 {
   display:none;
 }
 
-.icon-height{
+#logo-img1 {
+  background-image: url(html5.png);
+  background-color: #FFFFFF;
+}
+
+#logo-img2 {
+  background-image: url(css3.png);
+  background-color: #FFFFFF;
+}
+
+#logo-img3 {
+  background-image: url(git.png);
+  background-color: #FFFFFF;
+}
+
+#logo-img4 {
+  background-image: url(pc.png);
+  background-color: #FFFFFF;
+}
+
+#logo-img5 {
+  background-image: url(bt.png);
+  background-color: #FFFFFF;
+}
+
+#logo-img6 {
+  background-image: url(pyt.png);
+  background-color: #FFFFFF;
+}
+
+#logo-img7 {
+  background-image: url(dj.png);
+  background-color: #092E20;
+}
+
+#logo-img8 {
+  background-image: url(aws1.png);
+  background-color: #FFFFFF;
+}
+
+#logo-img9 {
+  background-image: url(dj.png);
+  background-color: #FFFFFF;
+}
+
+.box{
   height: 58px;
   padding: 45px 50px;
 }
 
 .icon-logo{
-  background-image: url(bt.png);
   background-repeat: no-repeat;
   background-position: center;
-  background-color: #FFFFFF;
   cursor: pointer;
-  position: relative;
-  padding: px;
   height: 55px;
   width: 55px;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
-.icon-logo:hover {
+.logo:hover {
   background-color: rgba(255, 255, 255, 0.5);
 }
 
