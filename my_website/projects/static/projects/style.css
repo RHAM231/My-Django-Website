@@ -183,6 +183,12 @@ a uniform hover color when pressed or clicked*/
     padding:50px 80px;
 }
 
+.section-intro{
+    background-color: #E7EAED;
+    color: #000000;
+    padding:50px 10px;
+}
+
 .section-light{
     background-color: #E7EAED;
     color: #000000;
@@ -449,8 +455,8 @@ a uniform hover color when pressed or clicked*/
 }
 
 #logo-img2 {
-  background-image: url(css3.png);
-  background-color: #FFFFFF;
+  background-image: url(github2.png);
+  background-color: #000000;
 }
 
 #logo-img3 {
@@ -464,8 +470,8 @@ a uniform hover color when pressed or clicked*/
 }
 
 #logo-img5 {
-  background-image: url(bt.png);
-  background-color: #FFFFFF;
+  background-image: url(bt2.png);
+  background-color: #7952B3;
 }
 
 #logo-img6 {
@@ -479,31 +485,45 @@ a uniform hover color when pressed or clicked*/
 }
 
 #logo-img8 {
-  background-image: url(aws1.png);
-  background-color: #FFFFFF;
+  background-image: url(aws3.png);
+  background-color: #232F3F;
 }
 
 #logo-img9 {
-  background-image: url(dj.png);
+  background-image: url(css3.png);
   background-color: #FFFFFF;
 }
 
+#logo-img10 {
+  background-image: url(vs2.png);
+  background-color: #FFFFFF;
+}
+
+#logo-img10:hover {
+  background-image: rgba(255, 255, 255, 0.5);
+}
+
 .box{
-  height: 58px;
-  padding: 45px 50px;
+  height: 100px;
+  width: 100px;
+  /*margin: 45px 50px;*/
 }
 
 .icon-logo{
   background-repeat: no-repeat;
   background-position: center;
   cursor: pointer;
-  height: 55px;
-  width: 55px;
+  height: 100px;
+  width: 100px;
+  /*padding: 15px;*/
+  margin: 15px 15px;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
-.logo:hover {
-  background-color: rgba(255, 255, 255, 0.5);
+.icon-logo:hover {
+  height: 150px;
+  width: 100px;
+  margin: 10px 10px 10px 10px;
 }
 
 /**************************************************************************/
