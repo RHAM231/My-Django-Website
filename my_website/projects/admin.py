@@ -11,7 +11,8 @@ from .models import (CheckListHeader,
                      ProjectSummaryList,
                      PortfolioInfo, PortfolioSkill,
                      TestObject,
-                     Logo
+                     Logo,
+                     IconSkill
                      )
 
 admin.site.register(CheckListHeader)
@@ -28,3 +29,4 @@ admin.site.register(PortfolioInfo)
 admin.site.register(PortfolioSkill)
 admin.site.register(TestObject)
 admin.site.register(Logo)
+admin.site.register(IconSkill)

@@ -442,6 +442,7 @@ a uniform hover color when pressed or clicked*/
 /*ICONS*/
 /**************************************************************************/
 
+/*Hides the default bootstrap button for each icon*/
 #icon-label1, #icon-label2, #icon-label3,
 #icon-label4, #icon-label5, #icon-label6,
 #icon-label7, #icon-label8, #icon-label9,
@@ -449,81 +450,93 @@ a uniform hover color when pressed or clicked*/
   display:none;
 }
 
-#logo-img1 {
-  background-image: url(html5.png);
+/*Sets the image and background color for each icon. Background color is
+set to match solid tiles to preserve color on hover effect. Id's named
+after each logo to avoid manual updates as skills are add to the database*/
+
+/*HTML5*/
+#ht5-id {
+  background-image: url(html5_45.png);
   background-color: #FFFFFF;
 }
 
-#logo-img2 {
-  background-image: url(github2.png);
+/*GitHub*/
+#gh-id {
+  background-image: url(github_60.png);
   background-color: #000000;
 }
 
-#logo-img3 {
-  background-image: url(git.png);
+/*Git*/
+#git-id {
+  background-image: url(git_45.png);
   background-color: #FFFFFF;
 }
 
-#logo-img4 {
-  background-image: url(pc.png);
+/*PyCharm*/
+#pc-id {
+  background-image: url(pc_45.png);
   background-color: #FFFFFF;
 }
 
-#logo-img5 {
-  background-image: url(bt2.png);
+/*Bootstrap*/
+#bst-id {
+  background-image: url(bst_55.png);
   background-color: #7952B3;
 }
 
-#logo-img6 {
-  background-image: url(pyt.png);
+/*Python*/
+#pyt-id {
+  background-image: url(pyt_45.png);
   background-color: #FFFFFF;
 }
 
-#logo-img7 {
-  background-image: url(dj.png);
+/*Django*/
+#dj-id {
+  background-image: url(dj_45.png);
   background-color: #092E20;
 }
 
-#logo-img8 {
-  background-image: url(aws3.png);
+/*Amazon Web Services*/
+#aws-id {
+  background-image: url(aws_55.png);
   background-color: #232F3F;
 }
 
-#logo-img9 {
-  background-image: url(css3.png);
+/*CSS3*/
+#c3-id {
+  background-image: url(css3_45.png);
   background-color: #FFFFFF;
 }
 
-#logo-img10 {
-  background-image: url(vs2.png);
+/*Microsoft Visual Studio Code*/
+#vs-id {
+  background-image: url(vs_55.png);
   background-color: #FFFFFF;
 }
 
-#logo-img10:hover {
-  background-image: rgba(255, 255, 255, 0.5);
-}
-
+/*Styles the container holding the icons. Size is set to contain the
+larger tile on hover.*/
 .box{
-  height: 100px;
-  width: 100px;
-  /*margin: 45px 50px;*/
+  height: 150px;
+  width: 150px;
 }
 
+/*Styles the tile inside the box*/
 .icon-logo{
   background-repeat: no-repeat;
   background-position: center;
   cursor: pointer;
   height: 100px;
   width: 100px;
-  /*padding: 15px;*/
   margin: 15px 15px;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
+/*Sets hover effects for the tiles*/
 .icon-logo:hover {
-  height: 150px;
+  height: 125px;
   width: 100px;
-  margin: 10px 10px 10px 10px;
+  margin: 15px 10px;
 }
 
 /**************************************************************************/

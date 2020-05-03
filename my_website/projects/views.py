@@ -10,7 +10,8 @@ from . models import (
     PortfolioInfo,
     TestObject,
     PortfolioSkill,
-    Logo
+    Logo,
+    IconSkill
 )
 from django.core.mail import send_mail
 from .forms import ContactForm
@@ -23,6 +24,7 @@ from django.views.generic import (
 def home(request):
     me = PortfolioInfo.objects.get()
     context = {
+        'iconskills': IconSkill.objects.all(),
         'projects': Project.objects.all().order_by('index_key'),
         'mybackground': me.background
     }

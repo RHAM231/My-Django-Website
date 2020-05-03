@@ -14,6 +14,16 @@ class Project(models.Model):
         return self.title
 
 
+class IconSkill(models.Model):
+    objects = None
+    name = models.CharField(max_length=100)
+    icon_id = models.CharField(max_length=100)
+    link = models.TextField()
+
+    def __str__(self):
+        return self.name
+
+
 class Logo(models.Model):
     objects = None
     image = models.ImageField(upload_to='images')
