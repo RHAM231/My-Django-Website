@@ -3,7 +3,8 @@
 
 {% block content %}
 
-<div class="container py-5 px-5">
+
+<div class="section-about py-5 px-5">
 <!--        <div class="row border-bottom border-dark py-4"></div>-->
 <!--        <div class="row">-->
 
@@ -54,40 +55,68 @@
 
 
 <div class="row">
-  <div class="profile-card">
-    <div class="card-custom">
-      <img src="{% static 'projects/me.JPG' %}" alt="" style="width:100%">
-      <div class="container">
-        <h2>Rex Mitchell</h2>
-        <p class="title">Software Engineer</p>
-        <p>nogardjmj@gmail.com</p>
-        <p><button class="abt-btn">GitHub</button></p>
-        <p><button class="abt-btn">Projects</button></p>
-        <p><button class="abt-btn">Contact</button></p>
-      </div>
-    </div>
-  </div>
+<!--<div class="section-about"></div>-->
+<!--  <div class="profile-card">-->
+<!--    <div class="card-custom">-->
+<!--      <img src="{% static 'projects/me.JPG' %}" alt="" style="width:100%">-->
+<!--      <div class="container">-->
+<!--        <h2>Rex Mitchell</h2>-->
+<!--        <p class="title">Software Engineer</p>-->
+<!--        <p>nogardjmj@gmail.com</p>-->
+<!--        <p><button class="abt-btn">GitHub</button></p>-->
+<!--        <p><button class="abt-btn">Projects</button></p>-->
+<!--        <p><button class="abt-btn">Contact</button></p>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
 
-  <div class="background-card">
-    <div class="card-custom">
+  <div class="col">
+
       <div class="container">
-        <h2 class="text">Hi, I'm Rex</h2>
-        <p class="text">I'm a software engineer. I talk to computers.</p>
-        <p class="text">If I could tell you one thing about me, it would be that I care deeply about quality.</p>
-        <p class="text"> I strive to produce the highest levels of it both in my personal life and in work.</p>
-        <h2 class="text">Where I Came From</h2>
-        <p class="text">I come from the aerospace industry in Huntsville, AL, USA. After three years of doing mechanical and electrical work, I decided I wanted to get my hands directly on code. I've enjoyed every moment of the journey since and haven't looked back.</p>
-        <h2 class="text">Where I'm Going</h2>
-        <p class="text">I'm pursuing web development. My long term goal is working as a Full Stack Developer. I love working on multiple parts of a project, tracking data through systems, and ensuring all parts of a project talk to each other well.</p>
-        <p class="text">If you think these goals align with your company, reach out to me and I can help you work towards yours!</p>
-        <h2 class="title">Languages</h2>
-        <h5 class="text">Python, HTML, CSS</h5>
-        <h2 class="title">Tools</h2>
-        <h5>Django, Bootstrap, AWS, Pycharm, Git, GitHub, Visual Studio Code</h5>
+
+        <div class="row py-4">
+          <div class="col-sm-12 col-md-4 col-lg-4">
+            <img src="{% static 'projects/me.JPG' %}" alt="" style="width:100%">
+          </div>
+          <div class="col-sm-12 col-md-8 col-lg-8">
+            <h2 class="">Languages</h2>
+            <h5 class="">Python, HTML, CSS</h5>
+            <h2 class="">Tools</h2>
+            <h5>Django, Bootstrap, AWS, Pycharm, Git, GitHub, Visual Studio Code</h5>
+          </div>
+        </div>
+
+        <div class="row border-top border-dark"></div>
+        <div class="row py-2"></div>
+
+        <h2>Hi, I'm Rex</h2>
+        <p>I'm a software engineer. I talk to computers. If I could tell you one thing about me, it would be that I care deeply
+          about quality. I strive to produce the highest levels of it both in my personal life
+          and in work.</p>
+
+        <div class="row border-top border-dark"></div>
+        <div class="row py-2"></div>
+
+        <h2>Where I Came From</h2>
+        <p>I majored in mechanical engineering and pursued an aerospace career.
+          After three years of mechanical and electrical work, I decided to pursue coding full
+          time. I've enjoyed every moment of the journey since.</p>
+
+        <div class="row border-top border-dark"></div>
+        <div class="row py-2"></div>
+
+        <h2>Where I'm Going</h2>
+        <p>I'm pursuing web development. My long term goal is working as a Full
+          Stack Developer. If you think these goals align with your company, reach out to me
+          and I can help you work towards yours!</p>
       </div>
-    </div>
+      <div class="row h-85 d-flex justify-content-center">
+         <a href="{% url 'contact' %}" class="link-btn">Contact Me!</a>
+      </div>
+
   </div>
 </div>
+<!--</div>-->
 
 </div>
 

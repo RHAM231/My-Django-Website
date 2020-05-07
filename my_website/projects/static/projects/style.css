@@ -7,6 +7,10 @@ LINE ## - WEBSITE BODY, FONT, WRAPPER
 LINE ## - HEADER
 LINE ## - FOOTER
 LINE ## - BUTTONS
+    LINE ## - LINK BUTTON
+    LINE ## - LINK BUTTON
+    LINE ## - LINK BUTTON
+    LINE ## - LINK BUTTON
 LINE ## - PARALLAX CONTENT
 LINE ## - ABOUT ME
 LINE ## - CONTACT ME PAGE
@@ -41,7 +45,7 @@ body, html {
 
 .wrapper {
 /*    background: radial-gradient(#A9AFB3, #8E9397);*/
-    background: #E6EAED; /*#A1C2DF, #E6EAED, #D3E3F1, #f4f4f4, #00B9CD, #D5D0D7, #221713, #68543d, #A9AFB3, #E86618
+    background: #FFFFFF; /*#A1C2DF, #E6EAED, #D3E3F1, #f4f4f4, #00B9CD, #D5D0D7, #221713, #68543d, #A9AFB3, #E86618
 #ECBA67, #EBE0A8, #CDB689, #AB612D, #e1d29c, #191919 */
     /*background: #73787D;*/
     overflow: auto;
@@ -326,7 +330,7 @@ a uniform hover color when pressed or clicked*/
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  width: 150px;
+  width: 152px;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
@@ -335,6 +339,32 @@ a uniform hover color when pressed or clicked*/
   color: #FFFFFF; /*#cccccc, #FF9B3D*/
   text-decoration: none;
 }
+
+/**************************************************************************/
+/*CONTACT ME BUTTON*/
+/**************************************************************************/
+
+/*.link-btn {
+  background-color: #000000; *//*#211F1F, #942113, #E7EAED*//*
+  border: none;
+  color: #FFFFFF;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  width: 152px;
+  height: 55px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.link-btn:hover {
+  background-color: #9AC4E8; *//*#E7EAED, #E2A373*//*
+  color: #FFFFFF; *//*#cccccc, #FF9B3D*//*
+  text-decoration: none;
+  width: 165px;
+  height: 65px;
+}*/
 
 /**************************************************************************/
 /*BUTTONS ON ABOUT ME PAGE*/
@@ -694,4 +724,9 @@ footer .footer-link:hover {
 
 .title {
   color: grey;
+}
+
+.section-about {
+  width: 100%; max-width: 1000px;
+  margin: 0 auto;
 }
