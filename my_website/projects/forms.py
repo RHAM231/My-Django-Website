@@ -10,7 +10,7 @@ class ContactForm(forms.Form):
         widget=forms.TextInput(attrs={'placeholder': 'Subject', 'class': 'form-control'}), max_length=100)
     message = forms.CharField(
         widget=forms.Textarea(attrs={'placeholder': 'Message', 'class': 'form-control'}))
-    cc_myself = forms.BooleanField(required=False)
+    cc_myself = forms.BooleanField(required=False, label='Cc Myself')
 
 
 class NameForm(forms.Form):

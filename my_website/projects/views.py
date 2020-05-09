@@ -53,18 +53,12 @@ def contact(request):
                 sender,
                 recipients,
                 fail_silently=False)
-            return render(request, 'projects/contact_success.html')
+            return render(request, 'projects/contact_success.html', {'title': 'Contact'})
 
     else:
         form = ContactForm()
 
     return render(request, 'projects/contact.html', {'form': form, 'title': 'Contact'})
-
-
-# def contact(request):
-#     send_mail('test', 'test', 'rex.ha.mitchell@gmail.com', ['rex.ha.mitchell@gmail.com'], fail_silently=False)
-#
-#     return render(request, 'projects/contact_success.html')
 
 
 def contact_success(request):
