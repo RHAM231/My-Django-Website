@@ -58,7 +58,7 @@ def contact(request):
     else:
         form = ContactForm()
 
-    return render(request, 'projects/contact.html', {'form': form})
+    return render(request, 'projects/contact.html', {'form': form, 'title': 'Contact'})
 
 
 # def contact(request):
@@ -68,7 +68,7 @@ def contact(request):
 
 
 def contact_success(request):
-    return render(request, 'projects/contact_success.html')
+    return render(request, 'projects/contact_success.html', {'title': 'Contact'})
 
 
 def portfolio_project(request):
@@ -78,17 +78,18 @@ def portfolio_project(request):
         'projectsummaries': ProjectSummary.objects.all().order_by('index_key'),
         'projectsumlists': ProjectSummaryList.objects.all().order_by('index_key'),
         'projectdescriptions': ProjectDescription.objects.all().order_by('index_key'),
-        'projectdeslists': ProjectDescriptionList.objects.all().order_by('index_key')
+        'projectdeslists': ProjectDescriptionList.objects.all().order_by('index_key'),
+        'title': 'Projects'
     }
     return render(request, 'projects/portfolio_project.html', context)
 
 
 def project2(request):
-    return render(request, 'projects/project2.html')
+    return render(request, 'projects/project2.html', {'title': 'Projects'})
 
 
 def project3(request):
-    return render(request, 'projects/project3.html')
+    return render(request, 'projects/project3.html', {'title': 'Projects'})
 
 
 def about_me(request):
@@ -96,19 +97,21 @@ def about_me(request):
     myskills = PortfolioSkill.objects.all()
     context = {
         'myimage': me.image,
-        'myskills': myskills
+        'myskills': myskills,
+        'title': 'About'
     }
     return render(request, 'projects/about_me.html', context)
 
 
 def resume(request):
-    return render(request, 'projects/resume.html')
+    return render(request, 'projects/resume.html', {'title': 'Resume'})
 
 
 def checklist(request):
     context = {
         'headers': CheckListHeader.objects.all().order_by('indexkey'),
-        'linkheaders': LinkHeader.objects.all()
+        'linkheaders': LinkHeader.objects.all(),
+        'title': 'Checklist'
     }
     # stuff2 = CheckListEntry.objects.filter(name__contains='Keep')
 
