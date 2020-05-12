@@ -22,7 +22,6 @@ LINE ## - OTHER
 /*WEBSITE BODY, FONT, WRAPPER*/
 /**************************************************************************/
 body, html {
-    background: #282e34;/* *//**//*this is set by the wrapper below*/
     height: 100%;
     margin: 0;
     font-size: 16px;
@@ -32,22 +31,8 @@ body, html {
     color: #232629;
 }
 
-/* Colors from main image */
-/*#000000, black*/
-/*#FF9B3D, orange*/
-/*#D5D0D7, grey*/
-/*#B84032, redish orange*/
-/*#5D3655, purple*/
-/*#C02E21, red*/
-/*#221713, dark grey*/
-/*#C861B4, violet*/
-/*-----------------*/
-
 .wrapper {
-/*    background: radial-gradient(#A9AFB3, #8E9397);*/
-    background: #FFFFFF; /*#A1C2DF, #E6EAED, #D3E3F1, #f4f4f4, #00B9CD, #D5D0D7, #221713, #68543d, #A9AFB3, #E86618
-#ECBA67, #EBE0A8, #CDB689, #AB612D, #e1d29c, #191919 */
-    /*background: #73787D;*/
+    background: #FFFFFF;
     overflow: auto;
     min-height: 100%;
 }
@@ -158,64 +143,63 @@ a uniform hover color when pressed or clicked*/
 /**************************************************************************/
 
 .pimgintro, .pimg1, .pimg2, .pimg3 {
-    position:relative;
-    /*opacity:0.70;*/ /*fades the images out if needed*/
-    background-position:center;
-    background-size:cover;
-    background-repeat:no-repeat;
-    background-attachment:fixed;
+  position:relative;
+  background-position:center;
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-attachment:fixed;
 }
 
 .pimgintro {
-    background-image:url(computer1.jpg);
-    min-height: 600px;
+  background-image:url(computer1.jpg);
+  min-height: 600px;
 }
 
 .pimg1 {
-    background-image:url(laptop2.jpg);
-    min-height: 400px;
+  background-image:url(laptop2.jpg);
+  min-height: 400px;
 }
 
-.pimg2 { /*This one is flickering and unreliable, maybe something with Chrome*/
-    background-image:url(proj2-TBD.jpg);
-    min-height: 400px;
+.pimg2 {
+  background-image:url(proj2-TBD.jpg);
+  min-height: 400px;
 }
 
 .pimg3 {
-    background-image:url(proj3-TBD.jpg);
-    min-height: 400px;
+  background-image:url(proj3-TBD.jpg);
+  min-height: 400px;
 }
 
 .section{
-    text-align:center;
-    padding:50px 80px;
+  text-align:center;
+  padding:50px 80px;
 }
 
 .section-intro{
-    background-color: #E7EAED;
-    color: #000000;
-    padding:50px 10px;
+  background-color: #E7EAED;
+  color: #000000;
+  padding:50px 10px;
 }
 
 .section-light{
-    background-color: #E7EAED;
-    color: #000000;
+  background-color: #E7EAED;
+  color: #000000;
 }
 
 .ptext {
-    width:100%;
-    text-align:center;
-    color:#FFFFFF; /*#172027, #FF9B3D, #FFFFFF*/
-    font-size:24px;
-    letter-spacing:8px;
-    text-transform:uppercase;
+  width:100%;
+  text-align:center;
+  color:#FFFFFF; /*#172027, #FF9B3D, #FFFFFF*/
+  font-size:24px;
+  letter-spacing:8px;
+  text-transform:uppercase;
 }
 
 .ptext-sub {
-    text-align:center;
-    color:#FFFFFF;
-    font-size:18px;
-    letter-spacing:2px;
+  text-align:center;
+  color:#FFFFFF;
+  font-size:18px;
+  letter-spacing:2px;
 }
 
 /*.ptext .border{
@@ -229,20 +213,20 @@ a uniform hover color when pressed or clicked*/
 }*/
 
 @media(max-width:568px){
-    .pimg1, .pimg2, pimg3{
-    background-attachment:scroll;
-    }
+  .pimg1, .pimg2, pimg3{
+  background-attachment:scroll;
+  }
 }
 
 .project-link {
-    text-decoration: none;
-    color: #000;
+  text-decoration: none;
+  color: #000;
 }
 
 .project-link:hover {
-    color: #cccccc;
-    text-decoration: none;
-    background: rgba(255, 255, 255, 0.25);
+  color: #cccccc;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.25);
 }
 
 /**************************************************************************/
@@ -266,46 +250,46 @@ a uniform hover color when pressed or clicked*/
 }*/
 
 @media(max-width:1199px){
-    .line-top, .line-bottom {
-        width: 950px;
-    }
+  .line-top, .line-bottom {
+      width: 950px;
+  }
 }
 
 @media(max-width:1023px){
-    .line-top, .line-bottom {
-        width: 900px;
-    }
+  .line-top, .line-bottom {
+      width: 900px;
+  }
 }
 
 @media(max-width:767px){
-    .line-top, .line-bottom {
-        width: 400px;
-    }
+  .line-top, .line-bottom {
+      width: 400px;
+  }
 }
 
 @media(max-width:479px){
-    .line-top, .line-bottom {
-        width: 340px;
-    }
+  .line-top, .line-bottom {
+      width: 340px;
+  }
 }
 
 .p-info {
-    line-height: 1pt;
+  line-height: 1pt;
 }
 
 .profile-img {
-    width: 80%;
-    border:2px;
-    border-color:black;
-    border-style:solid;
+  width: 80%;
+  border:2px;
+  border-color:black;
+  border-style:solid;
 }
 
 .card1 {
-    background:#495C6D;
-    height:480px;
-    width:330px;
-    padding: 25px;
-    margin: 0 auto;
+  background:#495C6D;
+  height:480px;
+  width:330px;
+  padding: 25px;
+  margin: 0 auto;
 /*    position: absolute;
     top: 50%;
     left: 50%;
@@ -326,7 +310,7 @@ a uniform hover color when pressed or clicked*/
 /**************************************************************************/
 
 .link-btn {
-  background-color: #000000; /*#211F1F, #942113, #E7EAED*/
+  background-color: #000000;
   border: none;
   color: #FFFFFF;
   padding: 15px 32px;
@@ -339,8 +323,8 @@ a uniform hover color when pressed or clicked*/
 }
 
 .link-btn:hover {
-  background-color: #9AC4E8; /*#E7EAED, #E2A373*/
-  color: #FFFFFF; /*#cccccc, #FF9B3D*/
+  background-color: #9AC4E8;
+  color: #FFFFFF;
   text-decoration: none;
 }
 
@@ -380,7 +364,7 @@ a uniform hover color when pressed or clicked*/
   display: inline-block;
   padding: 8px;
   color: white;
-  background-color: #232629; /*#232629, #0A5291*/
+  background-color: #232629;
   text-align: center;
   cursor: pointer;
   width: 100%;
@@ -486,7 +470,8 @@ a uniform hover color when pressed or clicked*/
 
 /*Sets the image and background color for each icon. Background color is
 set to match solid tiles to preserve color on hover effect. Id's named
-after each logo to avoid manual updates as skills are add to the database*/
+after each logo to avoid manual updates as skills are added to the
+database*/
 
 /*HTML5*/
 #ht5-id {
@@ -596,16 +581,12 @@ fields to match the hover color for the buttons*/
 
 .success-img {
   background-image:url(laptop1.jpg);
-  /*opacity:0.70; *//*fades the images out if needed*/
   color: #000000;
   background-size:cover;
   background-position:center;
   height:100vh;
   display:flex;
   flex-direction:column;
-  /*justify-content:center;
-  align-items:center;
-  text-align:center;*/
   padding:0 20px;
 }
 
@@ -619,7 +600,7 @@ fields to match the hover color for the buttons*/
     text-transform:uppercase;
 }
 
-/*Creates background contrast for .stext above. */
+/*Creates background contrast for .stext above.*/
 .contrast {
   background: rgb(255, 255, 255);
   background: rgba(255, 255, 255, 0.5);
@@ -651,25 +632,25 @@ hides the default checklist button*/
 
 /*Sets footer size and color*/
 .footer {
-    background: #000000; /*#282e34, */
-    height: 100px;
+  background: #000000;
+  height: 100px;
 }
 
 /*Sets footer text color and centers it*/
 footer .footer-text {
-    color: #FFFFFF; /*#FFFFFF*/
-    text-align: center;
+  color: #FFFFFF;
+  text-align: center;
 }
 
 /*Sets link text colors and centers them*/
 footer .footer-link {
-    color: #FFFFFF; /*#000000, #FFFFFF*/
-    text-align: center;
+  color: #FFFFFF;
+  text-align: center;
 }
 
 /*Sets the hover effect for the link*/
 footer .footer-link:hover {
-  color: #000000; /*#000000, #FFFFFF*/
+  color: #000000;
   text-decoration: none;
   background: rgba(255, 100, 0, 0.25);
 }
@@ -679,55 +660,15 @@ footer .footer-link:hover {
 /**************************************************************************/
 
 
-.logo {
+/*.logo {
   height: 50px;
   width: 50px;
   border-radius: 50%;
-}
-
-/* Three columns side by side */
-.profile-card {
-  float: left;
-  width: 33.3%;
-  margin-bottom: 16px;
-  padding: 0 8px;
-}
-
-.background-card {
-  float: left;
-  width: 66.6%;
-  margin-bottom: 16px;
-  padding: 0 8px;
-}
-
-/* Display the columns below each other instead of side by side on small screens */
-@media screen and (max-width: 650px) {
-  .profile-card, .background-card {
-    width: 100%;
-    display: block;
-  }
-}
-
-/* Add some shadows to create a card effect */
-.card-custom {
-  background:#E7EAED; /*#FF9B3D, #E7EAED*/
-/*  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);*/
-}
+}*/
 
 /* Some left and right padding inside the container */
 .container {
   padding: 0 16px;
-}
-
-/* Clear floats */
-.container::after, .row::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
-.title {
-  color: grey;
 }
 
 .section-about {

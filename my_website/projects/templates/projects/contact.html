@@ -23,13 +23,11 @@
             <div class="col-sm-6 col-md-8 col-lg-6 py-2">
                 <div class="fieldWrapper">
                     {{ field.errors }}
-
                     {% if field.field.widget|is_checkbox %}
                         {{ field }} {{ field.label }}
                     {% else %}
                         {{ field }}
                     {% endif %}
-
                     {% if field.help_text %}
                     <p class="help">{{ field.help_text|safe }}</p>
                     {% endif %}

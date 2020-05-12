@@ -15,6 +15,9 @@ from .models import (CheckListHeader,
                      IconSkill
                      )
 
+# Registers all necessary database entries on the django admin page
+# to provide a GUI for database editing.
+
 admin.site.register(CheckListHeader)
 admin.site.register(CheckListEntry)
 admin.site.register(SubHeader)

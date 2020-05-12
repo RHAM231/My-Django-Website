@@ -1,6 +1,13 @@
 from django.db import models
 
 
+# 'models.py' creates all the database entries. Database entries get passed
+# to 'views.py'. 'views.py' then renders the entries through template tags
+# into the html django templates.
+
+# Creates the 'Project' entry in the database. This stores all info about
+# each of my coding projects. 'index_key' is used to control display order
+# on the home page.
 class Project(models.Model):
     objects = None
     title = models.CharField(max_length=100)
@@ -14,6 +21,8 @@ class Project(models.Model):
         return self.title
 
 
+# Creates the database entry for the skills displayed on the home page.
+# icon_id sets the unique id value in the html for CSS styling.
 class IconSkill(models.Model):
     objects = None
     name = models.CharField(max_length=100)
@@ -29,6 +38,7 @@ class Logo(models.Model):
     image = models.ImageField(upload_to='images')
 
 
+#
 class ProjectSummary(models.Model):
     objects = None
     index_key = models.IntegerField()
@@ -155,6 +165,7 @@ class RefLink(models.Model):
         return self.name
 
 
+# Enters me in the database
 class PortfolioInfo(models.Model):
     objects = None
     name_first = models.CharField(max_length=100)
@@ -169,6 +180,7 @@ class PortfolioInfo(models.Model):
         return self.name_first
 
 
+# Remove
 class TestObject(models.Model):
     objects = None
     test_attribute = models.CharField(max_length=100)
