@@ -10,9 +10,9 @@ I wanted to learn web development and opted for the Django framework.
 
 # Skills Covered
 
-Contact forms
-Django Custom Template tags
-Django Template Language: for loops, for loops with dictionaries
+* Contact forms
+* Django Custom Template tags
+* Django Template Language: for loops, for loops with dictionaries
 
 
 # My Thought Process and Methods
