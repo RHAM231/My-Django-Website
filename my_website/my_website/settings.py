@@ -66,6 +66,9 @@ TEMPLATES = [
                 # 'projects.load_setting',
             ],
 
+            # Registers a custom template filter in the projects app
+            # contained in a python file called myfilters.py
+            # Allows custom label display on the contact form fields
             'libraries':{
                 'myfilters': 'projects.myfilters',
 
@@ -134,11 +137,9 @@ MEDIA_URL = '/media/'
 # Controls email setting and specifies what email is used to send messages
 # to the address in the contact form under forms.py in the projects folder.
 
-
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
-EMAIL_HOST_USER = os.environ.get('PW_DJANGO_EMAIL')  # Use environ to hide user and pass on Git
+EMAIL_HOST_USER = os.environ.get('PW_DJANGO_EMAIL')
 EMAIL_HOST_PASSWORD = os.environ.get('PW_DJANGO_EMAIL_PASS')
 EMAIL_USE_TLS = True
-# EMAIL_USE_SSL = False test commit change

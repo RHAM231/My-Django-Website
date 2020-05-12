@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render
 from . models import (
     Project,
     CheckListHeader,
@@ -8,31 +8,29 @@ from . models import (
     ProjectDescription,
     ProjectDescriptionList,
     PortfolioInfo,
-    TestObject,
     PortfolioSkill,
     Logo,
     IconSkill
 )
 from django.core.mail import send_mail
 from .forms import ContactForm
-from django.views.generic import (
-    ListView,
-    DetailView
-)
 
 
+# Renders the home page.
+# 'iconskills' pulls skills with their associated pictures from the database
+# 'projects' renders projects from the database
 def home(request):
     me = PortfolioInfo.objects.get()
     context = {
         'iconskills': IconSkill.objects.all(),
-        'projects': Project.objects.all().order_by('index_key'),
-        'mybackground': me.background
+        'projects': Project.objects.all().order_by('index_key')
     }
     return render(request, 'projects/home.html', context)
 
 
 # Handles the backend of the contact form. This reads in the data
 # from the form and then sends it to the specified email address.
+# Form fields are pulled from forms.py in the projects app.
 def contact(request):
     if request.method == 'POST':
         form = ContactForm(request.POST)
@@ -61,14 +59,16 @@ def contact(request):
     return render(request, 'projects/contact.html', {'form': form, 'title': 'Contact'})
 
 
+# Renders the contact success page.
 def contact_success(request):
     return render(request, 'projects/contact_success.html', {'title': 'Contact'})
 
 
+# Renders the project description page for the django website.
+# The lists and bodies of texts are all stored in the database.
 def portfolio_project(request):
     logo = Logo.objects.get()
     context = {
-        'logo': logo.image,
         'projectsummaries': ProjectSummary.objects.all().order_by('index_key'),
         'projectsumlists': ProjectSummaryList.objects.all().order_by('index_key'),
         'projectdescriptions': ProjectDescription.objects.all().order_by('index_key'),
@@ -78,14 +78,17 @@ def portfolio_project(request):
     return render(request, 'projects/portfolio_project.html', context)
 
 
+# Renders the project description page for project 2.
 def project2(request):
     return render(request, 'projects/project2.html', {'title': 'Projects'})
 
 
+# Renders the project description page for project 3.
 def project3(request):
     return render(request, 'projects/project3.html', {'title': 'Projects'})
 
 
+# Renders the about me page, may not need database stuff as much.
 def about_me(request):
     me = PortfolioInfo.objects.get()
     myskills = PortfolioSkill.objects.all()
@@ -97,23 +100,16 @@ def about_me(request):
     return render(request, 'projects/about_me.html', context)
 
 
+# Renders the resume page
 def resume(request):
     return render(request, 'projects/resume.html', {'title': 'Resume'})
 
 
+# Renders the checklist page. Entries and headers are stored in the database.
 def checklist(request):
     context = {
         'headers': CheckListHeader.objects.all().order_by('indexkey'),
         'linkheaders': LinkHeader.objects.all(),
         'title': 'Checklist'
     }
-    # stuff2 = CheckListEntry.objects.filter(name__contains='Keep')
-
     return render(request, 'projects/project_checklist.html', context)
-
-
-# class CheckListView(ListView):
-#     # queryset = CheckListHeader.objects.all()
-#     context_object_name = 'headers'
-#     model = CheckListHeader
-#     template_name = 'projects/project_checklist.html'

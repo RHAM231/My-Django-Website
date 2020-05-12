@@ -1,8 +1,5 @@
 from django.urls import path
 from . import views
-# from . views import (
-#     CheckListView
-# )
 
 
 urlpatterns = [
@@ -17,6 +14,4 @@ urlpatterns = [
     path('resume/', views.resume, name='resume'),
     path('portfolio-project/project_checklist/', views.checklist,
          name='project_checklist'),
-    # path('portfolio-project/project_checklist', CheckListView.as_view(),
-    #      name='project_checklist'),
 ]
