@@ -4,46 +4,45 @@
 {% block content %}
 
 <div class="pimgintro">
-<!--used inline styling to get around h-100 not working-->
 <div class="container" style="height: 400px;">
-    <div class="row py-5"></div>
-    <div class="row d-flex justify-content-center py-3">
-        <div class="ptext">
-        <span class="align-text-middle">Welcome to my website!</span>
-        </div>
+  <div class="row py-5"></div>
+  <div class="row d-flex justify-content-center py-3">
+    <div class="ptext">
+      <span class="align-text-middle">Welcome to my website!</span>
     </div>
-    <div class="row d-flex justify-content-center">
-        <div class="ptext-sub my-auto">
-          <span class="align-text-middle">
-            <p>Check out my projects below</p>
-            <p>or read more about me</p>
-          </span>
-        </div>
+  </div>
+  <div class="row d-flex justify-content-center">
+    <div class="ptext-sub my-auto">
+      <span class="align-text-middle">
+        <p>Check out my projects below</p>
+        <p>or read more about me</p>
+      </span>
     </div>
-    <div class="row d-flex justify-content-center">
-        <div class="ptext-sub my-auto">
-          <span class="align-text-middle">
-            <a href="{% url 'about_me' %}" class="link-btn">here</a>
-          </span>
-        </div>
+  </div>
+  <div class="row d-flex justify-content-center">
+    <div class="ptext-sub my-auto">
+      <span class="align-text-middle">
+        <a href="{% url 'about_me' %}" class="link-btn">here</a>
+      </span>
     </div>
+  </div>
 </div>
 </div>
 
 <section class="section section-intro">
-    <h2>Here's What I Know</h2>
-    <div class="row d-flex justify-content-center py-2 px-2">
-        {% for icon in iconskills %}
-            <a class="box" href="{{ icon.link }}">
-            <input type="button"
-                   id="icon-label{{ forloop.counter }}">
-            <label class="icon-logo"
-                   id="{{ icon.icon_id }}"
-                   for="icon-label{{ forloop.counter }}">
-            </label>
-            </a>
-        {% endfor %}
-    </div>
+  <h2>Here's What I Know</h2>
+  <div class="row d-flex justify-content-center py-2 px-2">
+    {% for icon in iconskills %}
+      <a class="box" href="{{ icon.link }}">
+      <input type="button"
+             id="icon-label{{ forloop.counter }}">
+      <label class="icon-logo"
+             id="{{ icon.icon_id }}"
+             for="icon-label{{ forloop.counter }}">
+      </label>
+      </a>
+    {% endfor %}
+  </div>
 </section>
 
 <!--The link that's dynamically generated in this loop is pulled from the database.
@@ -51,41 +50,41 @@ the '' are removed from around project.link because they are already there when 
 because the link is passed to the template as a text string-->
 
 {% for project in projects %}
-    <div class="pimg{{ forloop.counter }}">
-        <div class="ptext align-middle">
-        <span class="align-middle">
-        <a href="{% url project.link %}" class="project-link">{{ project.title }}</a>
-        </span>
-        </div>
+  <div class="pimg{{ forloop.counter }}">
+    <div class="ptext align-middle">
+    <span class="align-middle">
+    <a href="{% url project.link %}" class="project-link">{{ project.title }}</a>
+    </span>
     </div>
-    <section class="section section-light">
-        <h2>{{ project.header }}</h2>
-        <p>{{ project.description }}</p>
-    </section>
+  </div>
+  <section class="section section-light">
+    <h2>{{ project.header }}</h2>
+    <p>{{ project.description }}</p>
+  </section>
 {% endfor %}
 
 <div class="pimgintro">
 <div class="container" style="height: 400px;">
-    <div class="row py-5"></div>
-    <div class="row d-flex justify-content-center py-3">
-        <div class="ptext">
-        <span class="align-text-middle">See something you like?</span>
-        </div>
+  <div class="row py-5"></div>
+  <div class="row d-flex justify-content-center py-3">
+    <div class="ptext">
+    <span class="align-text-middle">See something you like?</span>
     </div>
-    <div class="row d-flex justify-content-center">
-        <div class="ptext-sub my-auto">
-          <span class="align-text-middle">
-            <p>Check out my GitHub</p>
-          </span>
-        </div>
+  </div>
+  <div class="row d-flex justify-content-center">
+    <div class="ptext-sub my-auto">
+      <span class="align-text-middle">
+        <p>Check out my GitHub</p>
+      </span>
     </div>
-    <div class="row d-flex justify-content-center">
-        <a class="github-logo2" href="https://github.com/RHAM231">
-        <input type="button" name="" id="logo"><label class="github-logo-light" for="logo">
-            <span>GitHub</span>
-            <i class="fab fa-github"></i>
-        </label></a>
-    </div>
+  </div>
+  <div class="row d-flex justify-content-center">
+    <a class="github-logo2" href="https://github.com/RHAM231">
+    <input type="button" name="" id="logo"><label class="github-logo-light" for="logo">
+      <span>GitHub</span>
+      <i class="fab fa-github"></i>
+    </label></a>
+  </div>
 
 </div>
 </div>
