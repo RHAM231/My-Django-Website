@@ -5,108 +5,108 @@
 
 
 <div class="container px-5">
-    <div class="row d-flex justify-content-center py-4">
-        <h2 class="text-center">Portfolio Website</h2>
-    </div>
+  <div class="row d-flex justify-content-center py-4">
+    <h2 class="text-center">Portfolio Website</h2>
+  </div>
 
-    <div class="row border-custom"></div>
-    <div class="row py-2"></div>
+  <div class="row border-custom"></div>
+  <div class="row py-2"></div>
 
+  <div class="row">
+    <section class="col-sm-12 col-md-6 col-lg-4 py-2">
+      <section class="flex-center">
+        <h4 class="text-center">Description</h4>
+        <ul>
+          <li><b>Goal:</b> needed a portfolio website to showcase my coding projects</li>
+          <li><b>Challenges:</b> learning Django, Bootstrap, CSS, and HTML simultaneously</li>
+          <li><b>Timeline:</b> needed it as soon as possible without cutting corners on learning the material</li>
+          <li><b>Budget:</b> $$$ per month</li>
+          <li><b>Solution:</b> Patience, dedication, thoroughness, and the internet</li>
+        </ul>
+      </section>
+    </section>
+      <section class="col-sm-12 col-md-6 col-lg-4 py-2">
+        <section class="flex-center">
+          <h4 class="text-center">{{ projectsummaries.1.header }}</h4>
+          <ul>
+            <li><b>Python:</b> overall project design</li>
+            <li><b>CSS:</b> web page styling</li>
+            <li><b>HTML:</b> web page content</li>
+          </ul>
+          <h4 class="text-center">{{ projectsummaries.2.header }}</h4>
+          <ul>
+            <li><b>Pycharm:</b> editing and writing</li>
+            <li><b>Git/Github:</b> version control and backup</li>
+            <li><b>Django:</b> back end logic and structure</li>
+            <li><b>Bootstrap:</b> front end design</li>
+            <li><b>AWS:</b> deployment and hosting</li>
+          </ul>
+        </section>
+      </section>
+      <section class="col-sm-12 col-md-12 col-lg-4 py-2 my-auto">
         <div class="row">
-            <section class="col-sm-12 col-md-6 col-lg-4 py-2">
-                <section class="flex-center">
-                    <h4 class="text-center">Description</h4>
-                    <ul>
-                        <li><b>Goal:</b> needed a portfolio website to showcase my coding projects</li>
-                        <li><b>Challenges:</b> learning Django, Bootstrap, CSS, and HTML simultaneously</li>
-                        <li><b>Timeline:</b> needed it as soon as possible without cutting corners on learning the material</li>
-                        <li><b>Budget:</b> $$$ per month</li>
-                        <li><b>Solution:</b> Patience, dedication, thoroughness, and the internet</li>
-                    </ul>
-                </section>
-            </section>
-            <section class="col-sm-12 col-md-6 col-lg-4 py-2">
-                <section class="flex-center">
-                    <h4 class="text-center">{{ projectsummaries.1.header }}</h4>
-                    <ul>
-                        <li><b>Python:</b> overall project design</li>
-                        <li><b>CSS:</b> web page styling</li>
-                        <li><b>HTML:</b> web page content</li>
-                    </ul>
-                    <h4 class="text-center">{{ projectsummaries.2.header }}</h4>
-                    <ul>
-                        <li><b>Pycharm:</b> editing and writing</li>
-                        <li><b>Git/Github:</b> version control and backup</li>
-                        <li><b>Django:</b> back end logic and structure</li>
-                        <li><b>Bootstrap:</b> front end design</li>
-                        <li><b>AWS:</b> deployment and hosting</li>
-                    </ul>
-                </section>
-            </section>
-            <section class="col-sm-12 col-md-12 col-lg-4 py-2 my-auto">
-                <div class="row">
-<!--                No line between the input tag and the label tag
-                    to avoid a undesired hover effect with the link-->
-                    <div class="col-sm-12 col-md-4 col-lg-12">
-                    <div class="row py-2 justify-content-center">
-                        <a class="github-logo2" href="https://github.com/RHAM231/My-Django-Website">
-                        <input type="button" name="" id="logo"><label class="github-logo" for="logo">
-                            <span>Code</span>
-                            <i class="fab fa-github"></i>
-                        </label></a>
-                    </div>
-                    </div>
-                    <div class="col-sm-12 col-md-4 col-lg-12">
-                    <div class="row py-2 justify-content-center">
-                        <a href="{% url 'project_checklist' %}" class="link-btn">Checklist</a>
-                    </div>
-                    </div>
-                    <div class="col-sm-12 col-md-4 col-lg-12">
-                    <div class="row py-2 justify-content-center">
-                        <a href="{% url 'contact' %}" class="link-btn">Contact Me</a>
-                    </div>
-                    </div>
-                </div>
-            </section>
+<!--      No line between the input tag and the label tag
+          to avoid a undesired hover effect with the link-->
+          <div class="col-sm-12 col-md-4 col-lg-12">
+          <div class="row py-2 justify-content-center">
+            <a class="github-logo2" href="https://github.com/RHAM231/My-Django-Website">
+            <input type="button" name="" id="logo"><label class="github-logo" for="logo">
+              <span>Code</span>
+              <i class="fab fa-github"></i>
+            </label></a>
+          </div>
+          </div>
+          <div class="col-sm-12 col-md-4 col-lg-12">
+          <div class="row py-2 justify-content-center">
+            <a href="{% url 'project_checklist' %}" class="link-btn">Checklist</a>
+          </div>
+          </div>
+          <div class="col-sm-12 col-md-4 col-lg-12">
+          <div class="row py-2 justify-content-center">
+            <a href="{% url 'contact' %}" class="link-btn">Contact Me</a>
+          </div>
+          </div>
         </div>
+      </section>
+  </div>
 
-        <div class="row py-2"></div>
-        <div class="row border-custom"></div>
-        <div class="row py-2"></div>
+  <div class="row py-2"></div>
+  <div class="row border-custom"></div>
+  <div class="row py-2"></div>
 
-    <div class="project_description">
-            <div class="row">
-                <section class="col-12 py-3">
-                    <section class="flex-center h-100">
-                        <h4 class="text-center my-auto">{{ projectsummaries.0.header }}</h4>
-                        <p class="my-auto">{{ projectsummaries.0.paragraph }}
-                    </section>
-                </section>
-            </div>
-        {% for item in projectdescriptions %}
-            <div class="row py-2"></div>
-            <div class="row border-custom"></div>
-            <div class="row py-2"></div>
-            <div class="row">
-                <section class="col-12 py-3">
-                    <section class="flex-center h-100">
-                        <h4 class="text-center my-auto">{{ item.header }}</h4>
-                        <p class="my-auto">{{ item.paragraph }}
-                    </section>
-                </section>
-            </div>
-        {% endfor %}
+  <div class="project_description">
+    <div class="row">
+      <section class="col-12 py-3">
+        <section class="flex-center h-100">
+          <h4 class="text-center my-auto">{{ projectsummaries.0.header }}</h4>
+          <p class="my-auto">{{ projectsummaries.0.paragraph }}
+        </section>
+      </section>
     </div>
+    {% for item in projectdescriptions %}
+      <div class="row py-2"></div>
+      <div class="row border-custom"></div>
+      <div class="row py-2"></div>
+      <div class="row">
+        <section class="col-12 py-3">
+          <section class="flex-center h-100">
+            <h4 class="text-center my-auto">{{ item.header }}</h4>
+            <p class="my-auto">{{ item.paragraph }}
+          </section>
+        </section>
+      </div>
+    {% endfor %}
+  </div>
 
-    <div class="">
-    <ul>
-        {% for item in projectdeslists %}
-        <li>{{ item.name }}</li>
-        {% endfor %}
-    </ul>
-    </div>
+  <div class="">
+  <ul>
+    {% for item in projectdeslists %}
+      <li>{{ item.name }}</li>
+    {% endfor %}
+  </ul>
+  </div>
 
-    <div class="row border-custom py-4"></div>
+  <div class="row border-custom py-4"></div>
 </div>
 
 

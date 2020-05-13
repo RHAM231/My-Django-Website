@@ -3,24 +3,22 @@
 /**************************************************************************/
 
 /*
-LINE ## - WEBSITE BODY, FONT, WRAPPER
-LINE ## - HEADER
-LINE ## - FOOTER
-LINE ## - BUTTONS
-    LINE ## - LINK BUTTON
-    LINE ## - LINK BUTTON
-    LINE ## - LINK BUTTON
-    LINE ## - LINK BUTTON
-LINE ## - PARALLAX CONTENT
-LINE ## - ABOUT ME
-LINE ## - CONTACT ME PAGE
-LINE ## - CHECKLIST PAGE
-LINE ## - OTHER
+WEBSITE BODY, FONT, WRAPPER, BORDERS
+HEADER
+PARALLAX CONTENT
+LINK BUTTON, FORM SUBMIT BUTTON
+CUSTOM GITHUB BUTTON
+ICONS
+CONTACT ME PAGE
+CHECKLIST PAGE
+FOOTER
 */
 
 /**************************************************************************/
-/*WEBSITE BODY, FONT, WRAPPER*/
+/*WEBSITE BODY, FONT, WRAPPER, BORDERS*/
 /**************************************************************************/
+
+/*Sets the default font style for the website*/
 body, html {
     height: 100%;
     margin: 0;
@@ -31,12 +29,14 @@ body, html {
     color: #232629;
 }
 
+/*Sets the default background color for the website*/
 .wrapper {
     background: #FFFFFF;
     overflow: auto;
     min-height: 100%;
 }
 
+/*Sets the border dividers to a custom color*/
 .border-custom {
   border-top: 1px solid #CFCFCF;
 }
@@ -45,15 +45,17 @@ body, html {
 /*HEADER*/
 /**************************************************************************/
 
+/*Set background color and remove default Bootstrap margins and padding*/
 .navbar {
   background: #000000;
   margin-top: 0;
   padding:0px;
 }
 
+/*Style and position the logo*/
 .navbar-brand{
   color: #E7EAED;
-/*  height: 56px;*/
+  height: 56px;
   width: 56px;
   padding:0px 12px;
   margin: 0px;
@@ -65,18 +67,16 @@ body, html {
   margin: 0px 20px;
 }
 
-.navbar-brand:hover{
-  background: #9AC4E8;
-  color: #000000;
-}
-
 /*Styles the navbar links. line-height used to vertically center text*/
 .nav-link{
   color: #E7EAED;
   line-height: 40px;
 }
 
-.nav-link:hover{
+/*Sets hover effects for the navbar links, logo, toggler, and drop down
+items*/
+.nav-link:hover, .navbar-brand:hover,
+.fas:hover, .dropdown-item:hover{
   color: #000000;
   background: #9AC4E8;
 }
@@ -108,7 +108,7 @@ a uniform hover color when pressed or clicked*/
 
 /*Styles the toggler icon for the navbar*/
 .fas{
-  background: #000000; /*#000000, #E7EAED*/
+  background: #000000;
   font-size: 24px;
   line-height: 56px;
   margin: 0px 0px;
@@ -118,30 +118,21 @@ a uniform hover color when pressed or clicked*/
   color: #E7EAED;
 }
 
-/*Sets the hover style for the toggler*/
-.fas:hover{
-  background: #9AC4E8;
-  color: #000000;
-}
-
 /*Styles the dropdown menu opened by the toggler to match the navbar */
 .dropdown-menu{
   background: #000000;
 }
 
+/*Sets text color for the drop down items*/
 .dropdown-item{
   color: #E7EAED;
-}
-
-.dropdown-item:hover{
-  background: #9AC4E8;
-  color: #000000;
 }
 
 /**************************************************************************/
 /*PARALLAX CONTENT*/
 /**************************************************************************/
 
+/*Sets global styles and position for all parallax images on the home page*/
 .pimgintro, .pimg1, .pimg2, .pimg3 {
   position:relative;
   background-position:center;
@@ -150,51 +141,60 @@ a uniform hover color when pressed or clicked*/
   background-attachment:fixed;
 }
 
+/*Sets the image and size for main home page image*/
 .pimgintro {
   background-image:url(computer1.jpg);
   min-height: 600px;
 }
 
+/*Sets the image for the 'My Django Website' project*/
 .pimg1 {
   background-image:url(laptop2.jpg);
   min-height: 400px;
 }
 
+/*Sets the image for project 2*/
 .pimg2 {
   background-image:url(proj2-TBD.jpg);
   min-height: 400px;
 }
 
+/*Sets the image for project 3*/
 .pimg3 {
   background-image:url(proj3-TBD.jpg);
   min-height: 400px;
 }
 
+/*Styling for all home page sections between images*/
 .section{
   text-align:center;
   padding:50px 80px;
 }
 
+/*Styles the intro section on the homepage with the listed skills*/
 .section-intro{
   background-color: #E7EAED;
   color: #000000;
   padding:50px 10px;
 }
 
+/*Styles all the other home page sections*/
 .section-light{
   background-color: #E7EAED;
   color: #000000;
 }
 
+/*Styles the header text shown on top of the main parallax image*/
 .ptext {
   width:100%;
   text-align:center;
-  color:#FFFFFF; /*#172027, #FF9B3D, #FFFFFF*/
+  color:#FFFFFF;
   font-size:24px;
   letter-spacing:8px;
   text-transform:uppercase;
 }
 
+/*Styles the sub-header text shown on top of the main parallax image*/
 .ptext-sub {
   text-align:center;
   color:#FFFFFF;
@@ -202,27 +202,19 @@ a uniform hover color when pressed or clicked*/
   letter-spacing:2px;
 }
 
-/*.ptext .border{
-    background-color:#111;
-    color:#fff;
-    padding:20px;
-}
-
-.ptext .border.trans{
-    background-color:transparent
-}*/
-
-@media(max-width:568px){
+/*@media(max-width:568px){
   .pimg1, .pimg2, pimg3{
   background-attachment:scroll;
   }
-}
+}*/
 
+/*Styles the link text on top of each project image*/
 .project-link {
   text-decoration: none;
   color: #000;
 }
 
+/*Sets hover effects for the link text above*/
 .project-link:hover {
   color: #cccccc;
   text-decoration: none;
@@ -230,86 +222,12 @@ a uniform hover color when pressed or clicked*/
 }
 
 /**************************************************************************/
-/*ABOUT ME*/
+/*LINK BUTTON, FORM SUBMIT BUTTON*/
 /**************************************************************************/
 
-/* .line-top{
-*//*    width: 1110px;*//*
-    height: 1px;
-    border-bottom: 1px solid black;
-    padding: 25px;
-    margin: 0 auto;
-}
-
-.line-bottom{
-*//*    width: 1110px;*//*
-    height: 1px;
-    border-top: 1px solid black;
-    padding: 25px;
-    margin: 0 auto;
-}*/
-
-@media(max-width:1199px){
-  .line-top, .line-bottom {
-      width: 950px;
-  }
-}
-
-@media(max-width:1023px){
-  .line-top, .line-bottom {
-      width: 900px;
-  }
-}
-
-@media(max-width:767px){
-  .line-top, .line-bottom {
-      width: 400px;
-  }
-}
-
-@media(max-width:479px){
-  .line-top, .line-bottom {
-      width: 340px;
-  }
-}
-
-.p-info {
-  line-height: 1pt;
-}
-
-.profile-img {
-  width: 80%;
-  border:2px;
-  border-color:black;
-  border-style:solid;
-}
-
-.card1 {
-  background:#495C6D;
-  height:480px;
-  width:330px;
-  padding: 25px;
-  margin: 0 auto;
-/*    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin: -240px 0 0 -165px;*/
-}
-
-.card-border {
-  background:#A9AFB3;
-  height:530px;
-  width:380px;
-  margin:auto;
-  border:50px;
-  border-color:#1F85DE;
-}
-
-/**************************************************************************/
-/*LINK BUTTON*/
-/**************************************************************************/
-
-.link-btn {
+/*Sets default styling for all buttons that link to other pages on the
+site and for the contact form submit button.*/
+.link-btn, .frm-btn {
   background-color: #000000;
   border: none;
   color: #FFFFFF;
@@ -322,80 +240,14 @@ a uniform hover color when pressed or clicked*/
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
-.link-btn:hover {
+/*Sets hover effects for the buttons*/
+.link-btn:hover, .frm-btn:hover {
   background-color: #9AC4E8;
   color: #FFFFFF;
   text-decoration: none;
 }
 
-/**************************************************************************/
-/*CONTACT ME BUTTON*/
-/**************************************************************************/
-
-/*.link-btn {
-  background-color: #000000; *//*#211F1F, #942113, #E7EAED*//*
-  border: none;
-  color: #FFFFFF;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  width: 152px;
-  height: 55px;
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-}
-
-.link-btn:hover {
-  background-color: #9AC4E8; *//*#E7EAED, #E2A373*//*
-  color: #FFFFFF; *//*#cccccc, #FF9B3D*//*
-  text-decoration: none;
-  width: 165px;
-  height: 65px;
-}*/
-
-/**************************************************************************/
-/*BUTTONS ON ABOUT ME PAGE*/
-/**************************************************************************/
-
-.abt-btn {
-  border: none;
-  outline: 0;
-  display: inline-block;
-  padding: 8px;
-  color: white;
-  background-color: #232629;
-  text-align: center;
-  cursor: pointer;
-  width: 100%;
-}
-
-.abt-btn:hover {
-  background-color: #555;
-}
-
-/**************************************************************************/
-/*FORM SUBMIT BUTTON*/
-/**************************************************************************/
-
-.frm-btn {
-  background-color: #000000; /*#211F1F, #942113, #E7EAED*/
-  border: none;
-  color: #FFFFFF;
-  padding: 15px 32px;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  width: 150px;
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-}
-
-.frm-btn:hover {
-  background-color: #9AC4E8;
-  color: #FFFFFF;
-}
-
-/*Removes Bootstrap's default blue outline from the button*/
+/*Removes Bootstrap's default blue outline from the button when clicked*/
 .frm-btn:focus, .frm-btn:active {
    outline: none;
    box-shadow: none;
@@ -405,15 +257,18 @@ a uniform hover color when pressed or clicked*/
 /*CUSTOM GITHUB BUTTON*/
 /**************************************************************************/
 
+/*Hides the default Bootstrap button*/
 #logo {
   display:none;
 }
 
+/*Controls spacing around the GitHub button*/
 .github-logo2{
   height: 58px;
 }
 
-.github-logo{
+/*Sets style for the the dark and light versions of the GitHub buttons*/
+.github-logo, .github-logo-light{
   background-color: #000000;
   border: none;
   color: #FFFFFF;
@@ -424,17 +279,13 @@ a uniform hover color when pressed or clicked*/
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
+/*Overrides button colors defined above to create a lighter version*/
 .github-logo-light{
   background-color: #FFFFFF;
-  border: none;
   color: #000000;
-  cursor: pointer;
-  position: relative;
-  height: 58px;
-  width: 150px;
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
+/*Styles and positions the GitHub icon within the button*/
 .fab {
   font-size: 35px;
   position: absolute;
@@ -443,6 +294,7 @@ a uniform hover color when pressed or clicked*/
   transform: translate(-50%, -50%);
 }
 
+/*Styles and positions the text within the button*/
 .github-logo>span, .github-logo-light>span {
   font-size: 16px;
   position: absolute;
@@ -451,6 +303,7 @@ a uniform hover color when pressed or clicked*/
   transform: translate(-50%, 50%);
 }
 
+/*Sets hover effects for the both color versions of the button*/
 .github-logo:hover, .github-logo-light:hover {
   background: #9AC4E8;
   color: #000000;
@@ -579,6 +432,8 @@ fields to match the hover color for the buttons*/
   box-shadow: 0 0 0 0.2rem rgba(154, 196, 232, 0.7);
 }
 
+/*Styles and positions the background image for the contact success page.
+Sets it to cover the whole screen.*/
 .success-img {
   background-image:url(laptop1.jpg);
   color: #000000;
@@ -600,7 +455,8 @@ fields to match the hover color for the buttons*/
     text-transform:uppercase;
 }
 
-/*Creates background contrast for .stext above.*/
+/*Creates background contrast for .stext above. rgb used to support older
+websites*/
 .contrast {
   background: rgb(255, 255, 255);
   background: rgba(255, 255, 255, 0.5);
@@ -610,20 +466,18 @@ fields to match the hover color for the buttons*/
 /*CHECKLIST PAGE*/
 /**************************************************************************/
 
-/*Sets checklist margin on the web checklist page
-hides the default checklist button*/
+/*Sets checklist margin on the web checklist page and hides the default
+checklist button*/
 .check {
   padding-left: 1rem;
   list-style-type: none;
 }
 
+/*Sets margins for the text next to the checkbox and ensures that the text
+stays on the same line with the checkbox*/
 .check label {
   display : inline;
   padding-right : 4px;
-}
-
-.check input {
-  margin-top : 4px;
 }
 
 /**************************************************************************/
@@ -656,22 +510,5 @@ footer .footer-link:hover {
 }
 
 /**************************************************************************/
-/*OTHER
+/*END*/
 /**************************************************************************/
-
-
-/*.logo {
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
-}*/
-
-/* Some left and right padding inside the container */
-.container {
-  padding: 0 16px;
-}
-
-.section-about {
-  width: 100%; max-width: 1000px;
-  margin: 0 auto;
-}
