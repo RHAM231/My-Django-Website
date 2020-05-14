@@ -19,12 +19,12 @@ I implemented a checklist at the end of the development process to ensure a smoo
 The project is written following style guides for each language to the fullest extent possible. They are as follows:
 
 ##### Python
-* [PEP 8 -- Style Guide for Python Code]
-* [Django Documentation: Coding style]
+* [PEP 8 -- Style Guide for Python Code](https://www.python.org/dev/peps/pep-0008/)
+* [Django Documentation: Coding style](https://docs.djangoproject.com/en/dev/internals/contributing/writing-code/coding-style/)
 ##### HTML
 * [Google HTML/CSS Style Guide](https://google.github.io/styleguide/htmlcssguide.html)
-* [w3schools.com: HTML Style Guide and Coding Conventions]
-* [GitHub: HTML Style Guide]
+* [w3schools.com: HTML Style Guide and Coding Conventions](https://www.w3schools.com/html/html5_syntax.asp)
+* [GitHub: HTML Style Guide](https://gist.github.com/ryansechrest/8693303)
 ##### CSS
 * [CSS {guide:lines;}: High-level advice and guidelines for writing sane, manageable, scalable CSS](https://cssguidelin.es/)
 * [Google HTML/CSS Style Guide](https://google.github.io/styleguide/htmlcssguide.html)
