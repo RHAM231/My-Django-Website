@@ -7,9 +7,6 @@ from . models import (
     ProjectSummaryList,
     ProjectDescription,
     ProjectDescriptionList,
-    PortfolioInfo,
-    PortfolioSkill,
-    Logo,
     IconSkill
 )
 from django.core.mail import send_mail
@@ -20,7 +17,6 @@ from .forms import ContactForm
 # 'iconskills' pulls skills with their associated pictures from the database
 # 'projects' renders projects from the database
 def home(request):
-    me = PortfolioInfo.objects.get()
     context = {
         'iconskills': IconSkill.objects.all(),
         'projects': Project.objects.all().order_by('index_key')
@@ -67,7 +63,6 @@ def contact_success(request):
 # Renders the project description page for the django website.
 # The lists and bodies of texts are all stored in the database.
 def portfolio_project(request):
-    logo = Logo.objects.get()
     context = {
         'projectsummaries': ProjectSummary.objects.all().order_by('index_key'),
         'projectsumlists': ProjectSummaryList.objects.all().order_by('index_key'),
@@ -78,26 +73,19 @@ def portfolio_project(request):
     return render(request, 'projects/portfolio_project.html', context)
 
 
-# Renders the project description page for project 2.
+# Renders the project description page for project 2
 def project2(request):
     return render(request, 'projects/project2.html', {'title': 'Projects'})
 
 
-# Renders the project description page for project 3.
+# Renders the project description page for project 3
 def project3(request):
     return render(request, 'projects/project3.html', {'title': 'Projects'})
 
 
-# Renders the about me page, may not need database stuff as much.
+# Renders the about me page
 def about_me(request):
-    me = PortfolioInfo.objects.get()
-    myskills = PortfolioSkill.objects.all()
-    context = {
-        'myimage': me.image,
-        'myskills': myskills,
-        'title': 'About'
-    }
-    return render(request, 'projects/about_me.html', context)
+    return render(request, 'projects/about_me.html', {'title': 'About'})
 
 
 # Renders the resume page
@@ -105,7 +93,7 @@ def resume(request):
     return render(request, 'projects/resume.html', {'title': 'Resume'})
 
 
-# Renders the checklist page. Entries and headers are stored in the database.
+# Renders the checklist page. Entries and headers are stored in the database
 def checklist(request):
     context = {
         'headers': CheckListHeader.objects.all().order_by('indexkey'),

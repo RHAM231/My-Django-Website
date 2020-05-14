@@ -33,12 +33,7 @@ class IconSkill(models.Model):
         return self.name
 
 
-class Logo(models.Model):
-    objects = None
-    image = models.ImageField(upload_to='images')
-
-
-#
+# Stores summary paragraphs for projects
 class ProjectSummary(models.Model):
     objects = None
     index_key = models.IntegerField()
@@ -50,18 +45,20 @@ class ProjectSummary(models.Model):
         return f'{self.project}, {self.header}'
 
 
+# Stores summary list items for projects
 class ProjectSummaryList(models.Model):
     objects = None
     index_key = models.IntegerField()
     name = models.TextField()
     projectsummary = models.ForeignKey(ProjectSummary,
-                                related_name='summary_key',
-                                on_delete=models.CASCADE)
+                                       related_name='summary_key',
+                                       on_delete=models.CASCADE)
 
     def __str__(self):
         return self.name
 
 
+# Stores project description paragraphs
 class ProjectDescription(models.Model):
     objects = None
     index_key = models.IntegerField()
@@ -73,47 +70,20 @@ class ProjectDescription(models.Model):
         return f'{self.project}, {self.header}'
 
 
+# Stores project description items
 class ProjectDescriptionList(models.Model):
     objects = None
     index_key = models.IntegerField()
     name = models.TextField()
     projectdescription = models.ForeignKey(ProjectDescription,
-                                related_name='description_key',
-                                on_delete=models.CASCADE)
+                                           related_name='description_key',
+                                           on_delete=models.CASCADE)
 
     def __str__(self):
         return self.name
 
 
-# class ProjectListItem(models.Model):
-#     objects = None
-#     index_key = models.IntegerField()
-#     name = models.TextField()
-#     project = models.ForeignKey(Project,
-#                                 related_name='list_key',
-#                                 on_delete=models.CASCADE)
-#
-#     def __str__(self):
-#         return self.name
-
-
-# Took this model out and split it into the ProjectSummaries
-# and ProjectDescriptions models to avoid writing complicated
-# frontend filtering logic
-
-# class TextBody(models.Model):
-#     objects = None
-#     index_key = models.IntegerField()
-#     header = models.CharField(max_length=100)
-#     paragraph = models.TextField()
-#     project = models.ForeignKey(Project,
-#                                 related_name='project_key',
-#                                 on_delete=models.CASCADE)
-#
-#     def __str__(self):
-#         return f'{self.project}, {self.header}'
-
-
+# Stores all the checklist headers for the web development checklist page
 class CheckListHeader(models.Model):
     objects = None
     name = models.CharField(max_length=100)
@@ -123,6 +93,7 @@ class CheckListHeader(models.Model):
         return self.name
 
 
+# Stores all the checklist entries for the web development checklist page
 class CheckListEntry(models.Model):
     objects = None
     name = models.TextField()
@@ -134,6 +105,7 @@ class CheckListEntry(models.Model):
         return self.name
 
 
+# Model for storing sub headers, not currently used
 class SubHeader(models.Model):
     objects = None
     name = models.CharField(max_length=100)
@@ -145,6 +117,7 @@ class SubHeader(models.Model):
         return self.name
 
 
+# Reference link headers used on the checklist page. See project_checklist.html
 class LinkHeader(models.Model):
     objects = None
     name = models.CharField(max_length=100)
@@ -153,19 +126,21 @@ class LinkHeader(models.Model):
         return self.name
 
 
+# Reference links used on the checklist page. See project_checklist.html
 class RefLink(models.Model):
     objects = None
+    name = models.TextField()
+    link = models.TextField()
     linkheader = models.ForeignKey(LinkHeader,
                                    related_name='link_key',
                                    on_delete=models.CASCADE)
-    name = models.TextField()
-    link = models.TextField()
 
     def __str__(self):
         return self.name
 
 
-# Enters me in the database
+# Enters me in the database. Currently unused in the frontend but left in for future
+# scaling if needed
 class PortfolioInfo(models.Model):
     objects = None
     name_first = models.CharField(max_length=100)
@@ -180,15 +155,7 @@ class PortfolioInfo(models.Model):
         return self.name_first
 
 
-# Remove
-class TestObject(models.Model):
-    objects = None
-    test_attribute = models.CharField(max_length=100)
-
-    def __str__(self):
-        return self.test_attribute
-
-
+# Stores my skills
 class PortfolioSkill(models.Model):
     objects = None
     skill = models.CharField(max_length=100)

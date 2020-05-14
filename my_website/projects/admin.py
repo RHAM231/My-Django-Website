@@ -9,9 +9,7 @@ from .models import (CheckListHeader,
                      ProjectDescriptionList,
                      ProjectSummary,
                      ProjectSummaryList,
-                     PortfolioInfo, PortfolioSkill,
-                     TestObject,
-                     Logo,
+                     PortfolioInfo,
                      IconSkill
                      )
 
@@ -29,7 +27,4 @@ admin.site.register(ProjectSummary)
 admin.site.register(ProjectDescriptionList)
 admin.site.register(ProjectSummaryList)
 admin.site.register(PortfolioInfo)
-admin.site.register(PortfolioSkill)
-admin.site.register(TestObject)
-admin.site.register(Logo)
 admin.site.register(IconSkill)
