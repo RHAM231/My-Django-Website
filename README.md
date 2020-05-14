@@ -8,30 +8,15 @@ I wanted to learn web development and opted for the Django framework.
 
 # Goals
 
-# Skills Covered
-
-* Contact forms
-* Django Custom Template tags
-* Django Template Language: for loops, for loops with dictionaries
-
+I need a site up and running quickly without cutting corners on learning how to do front end and back end design.
 
 # My Thought Process and Methods
 
 I implemented a checklist at the end of development process to ensure a smooth deployment. It can be found here.
 
-# Installation
-
-Make sure that you have the latest version of python.
-Install requirements.txt file
-
-
-# Usage
-
-test
-
 # Build Status
 
-Where is the project at in build
+Deployed. Projects being added.
 
 # Tech/Frameworks Used
 
