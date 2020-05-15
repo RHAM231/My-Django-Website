@@ -8,7 +8,7 @@ I wanted to learn web development and opted for the Django framework for backend
 
 # Goals
 
-I needed a site up and running quickly without cutting corners on learning how to do front end and back end design. I used the methods outlined below.
+I needed a site up and running quickly without cutting corners on learning how to do front end and back end design. I used the methods outlined below to achieve a fully deployed website.
 
 # My Thought Process and Methods
 
