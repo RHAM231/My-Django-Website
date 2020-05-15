@@ -13,7 +13,7 @@ I needed a site up and running quickly without cutting corners on learning how t
 # My Thought Process and Methods
 
 ### Checklist
-I implemented a checklist at the end of the development process to ensure a smooth deployment. It can be found here.
+I implemented a checklist at the end of the development process to ensure a smooth deployment and overall clean, readable project. It can be found here.
 
 ### Style Guides
 The project is written following style guides for each language to the fullest extent possible. They are as follows:
@@ -30,7 +30,7 @@ The project is written following style guides for each language to the fullest e
 * [Google HTML/CSS Style Guide](https://google.github.io/styleguide/htmlcssguide.html)
 
 ### Comments
-Code is useless without liberal documentation. I added comments in all the source code, explaining what pieces of code are, what they do, and how they talk to other parts of the project. If customized code, such as Django template tags was needed, I explain that too.
+Code is useless without liberal documentation. I include comments in all the source code, explaining what pieces of code are, what they do, and how they talk to other parts of the project. If customized code, such as custom Django template tags are needed, I explain that too.
 
 # Build Status
 
