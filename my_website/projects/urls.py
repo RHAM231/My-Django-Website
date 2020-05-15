@@ -2,6 +2,7 @@ from django.urls import path
 from . import views
 
 
+# Defines the url paths for all links in the 'projects' app
 urlpatterns = [
     path('', views.home, name='projects-home'),
     path('portfolio-project/', views.portfolio_project,

@@ -13,6 +13,9 @@ from django.core.mail import send_mail
 from .forms import ContactForm
 
 
+# Renders web pages specific to the 'projects' app.
+
+
 # Renders the home page.
 # 'iconskills' pulls skills with their associated pictures from the database
 # 'projects' renders projects from the database
@@ -36,11 +39,9 @@ def contact(request):
             message = form.cleaned_data['message']
             sender = form.cleaned_data['sender']
             cc_myself = form.cleaned_data['cc_myself']
-
             recipients = ['rex.ha.mitchell@gmail.com']
             if cc_myself:
                 recipients.append(sender)
-
             send_mail(
                 subject,
                 message,
@@ -55,7 +56,7 @@ def contact(request):
     return render(request, 'projects/contact.html', {'form': form, 'title': 'Contact'})
 
 
-# Renders the contact success page.
+# Renders the contact success page upon successful completion of the form.
 def contact_success(request):
     return render(request, 'projects/contact_success.html', {'title': 'Contact'})
 

@@ -45,7 +45,8 @@ class ProjectSummary(models.Model):
         return f'{self.project}, {self.header}'
 
 
-# Stores summary list items for projects
+# Stores summary list items for projects, such as skills,
+# to do's, issues encountered, etc.
 class ProjectSummaryList(models.Model):
     objects = None
     index_key = models.IntegerField()
@@ -58,7 +59,7 @@ class ProjectSummaryList(models.Model):
         return self.name
 
 
-# Stores project description paragraphs
+# Stores large bodies of text describing the projects
 class ProjectDescription(models.Model):
     objects = None
     index_key = models.IntegerField()
@@ -70,7 +71,8 @@ class ProjectDescription(models.Model):
         return f'{self.project}, {self.header}'
 
 
-# Stores project description items
+# Stores project list items, such as skills,
+# to do's, issues encountered, etc.
 class ProjectDescriptionList(models.Model):
     objects = None
     index_key = models.IntegerField()

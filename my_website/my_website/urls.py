@@ -23,13 +23,13 @@ from . import views
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 
+# Defines the urls for the 'my_website' app
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('projects.urls')),
     path('projects/', TemplateView.as_view(template_name='projects/home.html')),
-    # path('about_me/', views.about_me, name='about_me'),
-    # path('resume/', views.resume, name='resume'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
+# Adds an extra layer of security for deployment
 # if settings.DEBUG:
 # urlpatterns += staticfiles_urlpatterns()
