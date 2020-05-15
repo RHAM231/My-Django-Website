@@ -38,9 +38,9 @@ Code is useless without liberal documentation. I include comments in all the sou
 
 Deployed. Projects being added.
 
-# Tech/Frameworks Used
+# Languages/Frameworks Used
 
-Python, AWS, Bootstrap, Django, HTML, CSS Pycharm
+Python, Pycharm, Django, Bootstrap, HTML, CSS, AWS
 
 # License
 
