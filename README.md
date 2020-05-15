@@ -30,7 +30,7 @@ The project is written following style guides for each language to the fullest e
 * [Google HTML/CSS Style Guide](https://google.github.io/styleguide/htmlcssguide.html)
 
 ### Comments
-Code is useless without liberal documentation. I include comments in all the source code, explaining what pieces of code are, what they do, and how they talk to other parts of the project. If customized code, such as custom Django template tags are needed, I explain that too.
+Code is useless without liberal documentation. I include comments in all the source code, explaining what pieces of code are, what they do, and how they talk to other parts of the project. If customized code is needed, such as custom Django template tags, I explain that too.
 
 # Build Status
 
