@@ -4,7 +4,7 @@ This is the code for my portfolio website where I showcase my projects.
 
 # Motivation
 
-I wanted to learn web development and opted for the Django framework. 
+I wanted to learn web development and opted for the Django framework for backend development and Bootstrap for frontend development.
 
 # Goals
 
@@ -30,7 +30,7 @@ The project is written following style guides for each language to the fullest e
 * [Google HTML/CSS Style Guide](https://google.github.io/styleguide/htmlcssguide.html)
 
 ### Comments
-Code is useless without liberal documentation. I added comments in all the source code, explaining what pieces of code are, what they do, and how they talk to other parts of the project.
+Code is useless without liberal documentation. I added comments in all the source code, explaining what pieces of code are, what they do, and how they talk to other parts of the project. If customized code, such as Django template tags was needed, I explain that too.
 
 # Build Status
 
@@ -42,4 +42,4 @@ Python, AWS, Bootstrap, Django, HTML, CSS Pycharm
 
 # License
 
-Copyright 2020 c Rex Mitchell
+Copyright 2020 © Rex Mitchell
