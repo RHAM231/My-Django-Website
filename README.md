@@ -8,12 +8,14 @@ I wanted to learn web development and opted for the Django framework for backend
 
 # Goals
 
-I needed a site up and running quickly without cutting corners on learning how to do front end and back end design. I used the method outlined below.
+I needed a site up and running quickly without cutting corners on learning how to do front end and back end design. I used the methods outlined below.
 
 # My Thought Process and Methods
 
+Software development is a group endeavor. I consider clean, readable code following established standards and explained with helpful comments as 100% essential to a successful project.
+
 ### Checklist
-I implemented a checklist at the end of the development process to ensure a smooth deployment and overall clean, readable project. It can be found here.
+I implemented a checklist at the end of the development process to ensure a smooth deployment and overall high quality project. It can be found here.
 
 ### Style Guides
 The project is written following style guides for each language to the fullest extent possible. They are as follows:
