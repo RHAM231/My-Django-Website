@@ -152,6 +152,11 @@ a uniform hover color when pressed or clicked*/
   min-height: 600px;
 }
 
+/*Sets container height to equal image height*/
+.container-parallax {
+  height: 600px;
+}
+
 /*Sets the image for the 'My Django Website' project*/
 .pimg1 {
   background-image:url(laptop2.jpg);
@@ -216,14 +221,17 @@ a uniform hover color when pressed or clicked*/
 /*Styles the link text on top of each project image*/
 .project-link {
   text-decoration: none;
-  color: #000;
+  color: #000000;
+  font-size:24px;
+  letter-spacing:7px;
+  text-transform:uppercase;
 }
 
 /*Sets hover effects for the link text above*/
 .project-link:hover {
-  color: #cccccc;
+  color: #FFFFFF;
   text-decoration: none;
-  background: rgba(255, 255, 255, 0.25);
+  background: rgba(100, 100, 100, 0.75);
 }
 
 /**************************************************************************/

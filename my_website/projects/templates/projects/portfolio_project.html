@@ -13,8 +13,7 @@
   <div class="row py-2"></div>
 
   <div class="row">
-    <section class="col-sm-12 col-md-6 col-lg-4 py-2">
-      <section class="flex-center">
+    <section class="col-sm-12 col-md-6 col-lg-4 py-2 flex-center">
         <h4 class="text-center">Description</h4>
         <ul>
           <li><b>Goal:</b> needed a portfolio website to showcase my coding projects</li>
@@ -23,10 +22,8 @@
           <li><b>Budget:</b> $$$ per month</li>
           <li><b>Solution:</b> Patience, dedication, thoroughness, and the internet</li>
         </ul>
-      </section>
     </section>
-      <section class="col-sm-12 col-md-6 col-lg-4 py-2">
-        <section class="flex-center">
+      <section class="col-sm-12 col-md-6 col-lg-4 py-2 flex-center">
           <h4 class="text-center">{{ projectsummaries.1.header }}</h4>
           <ul>
             <li><b>Python:</b> overall project design</li>
@@ -41,7 +38,6 @@
             <li><b>Bootstrap:</b> front end design</li>
             <li><b>AWS:</b> deployment and hosting</li>
           </ul>
-        </section>
       </section>
       <section class="col-sm-12 col-md-12 col-lg-4 py-2 my-auto">
         <div class="row">
@@ -76,23 +72,20 @@
 
   <div class="project_description">
     <div class="row">
-      <section class="col-12 py-3">
-        <section class="flex-center h-100">
+      <section class="col-12 py-3 flex-center h-100">
           <h4 class="text-center my-auto">{{ projectsummaries.0.header }}</h4>
           <p class="my-auto">{{ projectsummaries.0.paragraph }}
-        </section>
       </section>
     </div>
+<!--	Generates the headers and paragraphs from the database  -->
     {% for item in projectdescriptions %}
       <div class="row py-2"></div>
       <div class="row border-custom"></div>
       <div class="row py-2"></div>
       <div class="row">
-        <section class="col-12 py-3">
-          <section class="flex-center h-100">
+        <section class="col-12 py-3 flex-center h-100">
             <h4 class="text-center my-auto">{{ item.header }}</h4>
-            <p class="my-auto">{{ item.paragraph }}
-          </section>
+            <p class="my-auto">{{ item.paragraph|safe }}
         </section>
       </div>
     {% endfor %}
@@ -106,7 +99,7 @@
   </ul>
   </div>
 
-  <div class="row border-custom py-4"></div>
+  <div class="row py-4"></div>
 </div>
 
 
