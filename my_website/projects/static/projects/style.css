@@ -36,10 +36,9 @@ body, html {
     min-height: 100%;
 }
 
+/*Gets rid of the annoying horizontal scroll bar on the home page*/
 .container-no-margin {
-  width: inherit;
-/*  margin:0 ! important;
-  padding:0 ! important;*/
+  overflow-x: hidden;
 }
 
 /*Sets the border dividers to a custom color*/
