@@ -9,8 +9,6 @@ from . models import (
     ProjectDescriptionList,
     IconSkill
 )
-from django.core.mail import send_mail
-from .forms import ContactForm
 
 
 # Renders web pages specific to the 'projects' app.
@@ -25,40 +23,6 @@ def home(request):
         'projects': Project.objects.all().order_by('index_key')
     }
     return render(request, 'projects/home.html', context)
-
-
-# Handles the backend of the contact form. This reads in the data
-# from the form and then sends it to the specified email address.
-# Form fields are pulled from forms.py in the projects app.
-def contact_me(request):
-    if request.method == 'POST':
-        form = ContactForm(request.POST)
-        if form.is_valid():
-            name = form.cleaned_data['name']
-            subject = form.cleaned_data['subject']
-            message = form.cleaned_data['message']
-            sender = form.cleaned_data['sender']
-            cc_myself = form.cleaned_data['cc_myself']
-            recipients = ['rex.ha.mitchell@gmail.com']
-            if cc_myself:
-                recipients.append(sender)
-            send_mail(
-                subject,
-                message,
-                sender,
-                recipients,
-                fail_silently=False)
-            return render(request, 'projects/contact_success.html', {'title': 'Contact'})
-
-    else:
-        form = ContactForm()
-
-    return render(request, 'projects/contact_me.html', {'form': form, 'title': 'Contact'})
-
-
-# Renders the contact success page upon successful completion of the form.
-def contact_success(request):
-    return render(request, 'projects/contact_success.html', {'title': 'Contact'})
 
 
 # Renders the project description page for the django website.

@@ -70,7 +70,7 @@ TEMPLATES = [
             # contained in a python file called myfilters.py
             # Allows custom label display on the contact form fields
             'libraries':{
-                'myfilters': 'projects.myfilters',
+                'myfilters': 'contact.myfilters',
 
             }
         },
