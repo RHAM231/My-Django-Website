@@ -19,14 +19,15 @@ from django.urls import path, include
 from django.views.generic import TemplateView
 from django.conf import settings
 from django.conf.urls.static import static
-from . import views
-from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+# from . import views
+# from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 
 # Defines the urls for the 'my_website' app
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('projects.urls')),
+    path('contact/', include('contact.urls')),
     path('projects/', TemplateView.as_view(template_name='projects/home.html')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

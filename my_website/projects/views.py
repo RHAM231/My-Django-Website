@@ -30,7 +30,7 @@ def home(request):
 # Handles the backend of the contact form. This reads in the data
 # from the form and then sends it to the specified email address.
 # Form fields are pulled from forms.py in the projects app.
-def contact(request):
+def contact_me(request):
     if request.method == 'POST':
         form = ContactForm(request.POST)
         if form.is_valid():
@@ -53,7 +53,7 @@ def contact(request):
     else:
         form = ContactForm()
 
-    return render(request, 'projects/contact.html', {'form': form, 'title': 'Contact'})
+    return render(request, 'projects/contact_me.html', {'form': form, 'title': 'Contact'})
 
 
 # Renders the contact success page upon successful completion of the form.
