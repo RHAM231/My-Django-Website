@@ -29,7 +29,7 @@ urlpatterns = [
     path('', include('projects.urls')),
     path('contact/', include('contact.urls')),
     path('projects/', TemplateView.as_view(template_name='projects/home.html')),
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 # Adds an extra layer of security for deployment
 # if settings.DEBUG:
