@@ -131,10 +131,10 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
 ]
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-MEDIA_URL = '/media/'
+# MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+# MEDIA_URL = '/media/'
 
-# Controls email setting and specifies what email is used to send messages
+# Controls email settings and specifies what email is used to send messages
 # to the address in the contact form under forms.py in the projects folder.
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
