@@ -1,9 +1,11 @@
 from django.shortcuts import render
-from . models import (Project, IconSkill)
+# from projects.models import (Project, IconSkill)
 
 # Renders the home page.
 # 'iconskills' pulls skills with their associated pictures from the database
 # 'projects' renders projects from the database
+
+
 # def home(request):
 #     context = {
 #         'iconskills': IconSkill.objects.all(),
