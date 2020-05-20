@@ -49,13 +49,13 @@ def project3(request):
 
 
 # Renders the about me page
-def about_me(request):
-    return render(request, 'projects/about_me.html', {'title': 'About'})
+# def about_me(request):
+#     return render(request, 'projects/about_me.html', {'title': 'About'})
 
 
 # Renders the resume page
-def resume(request):
-    return render(request, 'projects/resume.html', {'title': 'Resume'})
+# def resume(request):
+#     return render(request, 'projects/resume.html', {'title': 'Resume'})
 
 
 # Renders the checklist page. Entries and headers are stored in the database
