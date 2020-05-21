@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.apps import apps
 from . models import (
     Project,
     CheckListHeader,
@@ -7,7 +8,6 @@ from . models import (
     ProjectSummaryList,
     ProjectDescription,
     ProjectDescriptionList,
-    IconSkill
 )
 
 
@@ -18,8 +18,10 @@ from . models import (
 # 'iconskills' pulls skills with their associated pictures from the database
 # 'projects' renders projects from the database
 def home(request):
+    # Let's load the 'Skill' model from the base_pages app and pass it into context
+    Skill = apps.get_model('base_pages', 'Skill')
     context = {
-        'iconskills': IconSkill.objects.all(),
+        'iconskills': Skill.objects.all(),
         'projects': Project.objects.all().order_by('index_key')
     }
     return render(request, 'projects/home.html', context)

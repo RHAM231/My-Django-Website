@@ -10,7 +10,6 @@ from .models import (CheckListHeader,
                      ProjectSummary,
                      ProjectSummaryList,
                      PortfolioInfo,
-                     IconSkill
                      )
 
 # Registers all necessary database entries on the django admin page
@@ -27,4 +26,3 @@ admin.site.register(ProjectSummary)
 admin.site.register(ProjectDescriptionList)
 admin.site.register(ProjectSummaryList)
 admin.site.register(PortfolioInfo)
-admin.site.register(IconSkill)

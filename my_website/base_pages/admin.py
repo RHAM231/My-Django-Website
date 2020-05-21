@@ -1,3 +1,7 @@
 from django.contrib import admin
+from .models import (Skill)
 
-# Register your models here.
+# Registers all necessary database entries on the django admin page
+# to provide a GUI for database editing.
+
+admin.site.register(Skill)

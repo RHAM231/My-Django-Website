@@ -1,5 +1,5 @@
 from django.shortcuts import render
-# from projects.models import (Project, IconSkill)
+
 
 # Renders the home page.
 # 'iconskills' pulls skills with their associated pictures from the database
