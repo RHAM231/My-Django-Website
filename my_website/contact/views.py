@@ -3,10 +3,6 @@ from django.core.mail import send_mail
 from . forms import ContactForm
 
 
-# def contact_me_test(request):
-#     return render(request, 'contact/contact_form.html')
-
-
 # Handles the backend of the contact form. This reads in the data
 # from the form and then sends it to the specified email address.
 # Form fields are pulled from forms.py in the projects app.
@@ -34,8 +30,3 @@ def contact_me(request):
         form = ContactForm()
 
     return render(request, 'contact/contact_form.html', {'form': form, 'title': 'Contact'})
-
-
-# Renders the contact success page upon successful completion of the form.
-# def contact_success(request):
-#     return render(request, 'contact/contact_form_success.html', {'title': 'Contact'})
