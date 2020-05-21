@@ -14,6 +14,18 @@ I needed a site up and running quickly without cutting corners on learning how t
 
 Software development is a group endeavor. I consider clean, readable code following established standards and explained with helpful comments as 100% essential to a successful project.
 
+### Apps
+
+Following Django convention, I split the project into apps based on function. The apps include:
+
+'base_pages': serves generic site pages such as 'home', 'about', etc. Also establishes a base.html template that all other templates inherit from. This allows me to write code for the header, footer, and other elements common to every page only once.
+
+'contact': renders the contact page and houses all the contact form logic.
+
+'my_website': the default generated app when the Django project was created. Controls admin functions such as overall url mapping, email settings, security settings, installed Django apps, etc.
+
+'projects': houses all logic for storing and rendering projects on my website.
+
 ### Checklist
 I implemented a checklist at the end of the development process to ensure a smooth deployment and an overall high quality project. It can be found here.FIXME AFTER DEPLOYMENT
 
