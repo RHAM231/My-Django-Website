@@ -4,7 +4,7 @@ This is the code for my portfolio website where I showcase my projects.
 
 # Motivation
 
-I wanted to learn web development and opted for the Django framework for backend development and Bootstrap for frontend development.
+I wanted to learn web development and opted for the Django framework for back end development and the Bootstrap framework for front end development.
 
 # Goals
 
