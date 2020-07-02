@@ -5,7 +5,6 @@
 
 <div class="container-no-margin">
 
-<!-- Intro section with welcome text and link button -->
 <div class="pimgintro">
 <div class="container-parallax">
   <div class="row py-5"></div>
@@ -32,7 +31,6 @@
 </div>
 </div>
 
-<!-- Skills Section -->
 <section class="section section-intro">
   <h2>Here's What I Know</h2>
   <div class="row d-flex justify-content-center py-2 px-2">
@@ -49,12 +47,6 @@
   </div>
 </section>
 
-<!--
-Projects Section: This displays all my home page projects.
-The url links below are generated dynamically from the database project entries.
-'' are removed from around project.link unlike other template links because the
-database generates them when passing the links to the template as a text string.
--->
 {% for project in projects %}
   <div class="pimg{{ forloop.counter }}">
     <div class="ptext align-middle">
@@ -72,7 +64,6 @@ database generates them when passing the links to the template as a text string.
   </section>
 {% endfor %}
 
-<!-- Closing Section with GitHub button	-->
 <div class="pimgintro">
 <div class="container-parallax">
   <div class="row py-5"></div>

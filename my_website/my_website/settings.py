@@ -66,10 +66,6 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
             ],
-
-            # Registers a custom template filter in the projects app
-            # contained in a python file called myfilters.py
-            # Allows custom label display on the contact form fields
             'libraries':{
                 'myfilters': 'contact.myfilters',
 
@@ -135,8 +131,6 @@ STATICFILES_DIRS = [
 # MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # MEDIA_URL = '/media/'
 
-# Controls email settings and specifies what email is used to send messages
-# to the address in the contact form under forms.py in the projects folder.
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'

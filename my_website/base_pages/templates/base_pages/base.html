@@ -33,10 +33,6 @@
 
   <meta charset="UTF-8">
 
-<!--
-Applies custom internet tab titles based on the title provided in each page view function's context.
-See views.py under the projects app
--->
   {% if title %}
     <title>{{ title }} | Rex Mitchell</title>
   {% else %}
@@ -88,15 +84,10 @@ See views.py under the projects app
     </div>
   </nav>
 
-<!--
-Let's put a wrapper around everything other than the header
-and footer to easily control, size, spacing, and background color
--->
   <div class="wrapper">
 {% block content %}{% endblock %}
   </div>
 
-<!-- Left some additional html structure to easily feed in future entries as needed -->
   <footer class="footer">
     <div class="container h-100">
       <div class="row h-100">

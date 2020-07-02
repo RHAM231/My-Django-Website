@@ -3,7 +3,6 @@ from . import views
 from contact import views as contact_views
 
 
-# Defines the url paths for all links in the 'projects' app
 urlpatterns = [
     path('portfolio-project/', views.portfolio_project, name='projects-portfolio-project'),
     path('project2/', views.project2, name='projects-project2'),

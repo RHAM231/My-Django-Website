@@ -1,8 +1,6 @@
 from django import forms
 
 
-# Creates the logic for the form fields on the contact form.
-# 'attrs' generates html for CSS styling.
 class ContactForm(forms.Form):
     name = forms.CharField(
         widget=forms.TextInput(

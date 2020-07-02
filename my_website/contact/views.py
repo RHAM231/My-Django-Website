@@ -3,9 +3,6 @@ from django.core.mail import send_mail
 from . forms import ContactForm
 
 
-# Handles the backend of the contact form. This reads in the data
-# from the form and then sends it to the specified email address.
-# Form fields are pulled from forms.py in the projects app.
 def contact_me(request):
     if request.method == 'POST':
         form = ContactForm(request.POST)

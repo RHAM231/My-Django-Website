@@ -22,7 +22,6 @@ from django.conf.urls.static import static
 # from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 
-# Defines the urls for the 'my_website' app
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('base_pages.urls')),

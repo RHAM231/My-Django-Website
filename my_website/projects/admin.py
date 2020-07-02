@@ -12,8 +12,6 @@ from .models import (CheckListHeader,
                      PortfolioInfo,
                      )
 
-# Registers all necessary database entries on the django admin page
-# to provide a GUI for database editing.
 
 admin.site.register(CheckListHeader)
 admin.site.register(CheckListEntry)

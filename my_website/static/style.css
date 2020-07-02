@@ -1,24 +1,3 @@
-/**************************************************************************/
-/*TABLE OF CONTENTS*/
-/**************************************************************************/
-
-/*
-WEBSITE BODY, FONT, WRAPPER, BORDERS
-HEADER
-PARALLAX CONTENT
-LINK BUTTON, FORM SUBMIT BUTTON
-CUSTOM GITHUB BUTTON
-ICONS
-CONTACT ME PAGE
-CHECKLIST PAGE
-FOOTER
-*/
-
-/**************************************************************************/
-/*WEBSITE BODY, FONT, WRAPPER, BORDERS*/
-/**************************************************************************/
-
-/*Sets the default font style for the website*/
 body, html {
     height: 100%;
     margin: 0;
@@ -29,35 +8,26 @@ body, html {
     color: #232629;
 }
 
-/*Sets the default background color for the website*/
 .wrapper {
     background: #FFFFFF;
     overflow: auto;
     min-height: 100%;
 }
 
-/*Gets rid of the annoying horizontal scroll bar on the home page*/
 .container-no-margin {
   overflow-x: hidden;
 }
 
-/*Sets the border dividers to a custom color*/
 .border-custom {
   border-top: 1px solid #CFCFCF;
 }
 
-/**************************************************************************/
-/*HEADER*/
-/**************************************************************************/
-
-/*Set background color and remove default Bootstrap margins and padding*/
 .navbar {
   background: #000000;
   margin-top: 0;
   padding:0px;
 }
 
-/*Style and position the logo*/
 .navbar-brand{
   color: #E7EAED;
   height: 56px;
@@ -67,51 +37,39 @@ body, html {
   line-height: 56px;
 }
 
-/*Adds margin for the dropdown menu for mobile*/
 .navbar-collapse{
   margin: 0px 20px;
 }
 
-/*Styles the navbar links. line-height used to vertically center text*/
 .nav-link{
   color: #E7EAED;
   line-height: 40px;
 }
 
-/*Sets hover effects for the navbar links, logo, toggler, and drop down
-items*/
 .nav-link:hover, .navbar-brand:hover,
 .fas:hover, .dropdown-item:hover{
   color: #000000;
   background: #9AC4E8;
 }
 
-/*Hides Bootstrap's built in elements behind the .fas icon below
-by setting all the height and widths to the same size. This ensures
-a uniform hover color when the toggler is pressed or clicked*/
 .navbar-toggler{
   margin: 0px 0px;
   padding: 0px 0px;
   height: 56px;
   width: 56px;
-  border: none; /*Border removed to avoid alignment issue*/
+  border: none;
 }
 
-/*Hides Bootstrap's built in elements behind the .fas icon below
-by setting all the height and widths to the same size. This ensures
-a uniform hover color when pressed or clicked*/
 .navbar-toggler-icon{
   height: 56px;
   width: 56px;
 }
 
-/*Removes Bootstrap's default blue outline from the toggler*/
 .navbar-toggler:focus,.navbar-toggler:active {
    outline: none;
    box-shadow: none;
 }
 
-/*Styles the toggler icon for the navbar*/
 .fas{
   background: #000000;
   font-size: 24px;
@@ -123,21 +81,14 @@ a uniform hover color when pressed or clicked*/
   color: #E7EAED;
 }
 
-/*Styles the dropdown menu opened by the toggler to match the navbar */
 .dropdown-menu{
   background: #000000;
 }
 
-/*Sets text color for the drop down items*/
 .dropdown-item{
   color: #E7EAED;
 }
 
-/**************************************************************************/
-/*PARALLAX CONTENT*/
-/**************************************************************************/
-
-/*Sets global styles and position for all parallax images on the home page*/
 .pimgintro, .pimg1, .pimg2, .pimg3 {
   position:relative;
   background-position:center;
@@ -146,55 +97,46 @@ a uniform hover color when pressed or clicked*/
   background-attachment:fixed;
 }
 
-/*Sets the image and size for main home page image*/
 .pimgintro {
   background-image:url(computer1.jpg);
   min-height: 600px;
 }
 
-/*Sets container height to equal image height*/
 .container-parallax {
   height: 600px;
 }
 
-/*Sets the image for the 'My Django Website' project*/
 .pimg1 {
   background-image:url(laptop2.jpg);
   min-height: 400px;
 }
 
-/*Sets the image for project 2*/
 .pimg2 {
   background-image:url(proj2-TBD.jpg);
   min-height: 400px;
 }
 
-/*Sets the image for project 3*/
 .pimg3 {
   background-image:url(proj3-TBD.jpg);
   min-height: 400px;
 }
 
-/*Styling for all home page sections between images*/
 .section{
   text-align:center;
   padding:50px 80px;
 }
 
-/*Styles the intro section on the homepage with the listed skills*/
 .section-intro{
   background-color: #E7EAED;
   color: #000000;
   padding:50px 10px;
 }
 
-/*Styles all the other home page sections*/
 .section-light{
   background-color: #E7EAED;
   color: #000000;
 }
 
-/*Styles the header text shown on top of the main parallax image*/
 .ptext {
   width:100%;
   text-align:center;
@@ -204,7 +146,6 @@ a uniform hover color when pressed or clicked*/
   text-transform:uppercase;
 }
 
-/*Styles the sub-header text shown on top of the main parallax image*/
 .ptext-sub {
   text-align:center;
   color:#FFFFFF;
@@ -212,13 +153,6 @@ a uniform hover color when pressed or clicked*/
   letter-spacing:2px;
 }
 
-/*@media(max-width:568px){
-  .pimg1, .pimg2, pimg3{
-  background-attachment:scroll;
-  }
-}*/
-
-/*Styles the link text on top of each project image*/
 .project-link {
   text-decoration: none;
   color: #000000;
@@ -227,19 +161,12 @@ a uniform hover color when pressed or clicked*/
   text-transform:uppercase;
 }
 
-/*Sets hover effects for the link text above*/
 .project-link:hover {
   color: #FFFFFF;
   text-decoration: none;
   background: rgba(100, 100, 100, 0.75);
 }
 
-/**************************************************************************/
-/*LINK BUTTON, FORM SUBMIT BUTTON*/
-/**************************************************************************/
-
-/*Sets default styling for all buttons that link to other pages on the
-site and for the contact form submit button.*/
 .link-btn, .frm-btn {
   background-color: #000000;
   border: none;
@@ -253,34 +180,25 @@ site and for the contact form submit button.*/
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
-/*Sets hover effects for the buttons*/
 .link-btn:hover, .frm-btn:hover {
   background-color: #9AC4E8;
   color: #FFFFFF;
   text-decoration: none;
 }
 
-/*Removes Bootstrap's default blue outline from the button when clicked*/
 .frm-btn:focus, .frm-btn:active {
    outline: none;
    box-shadow: none;
 }
 
-/**************************************************************************/
-/*CUSTOM GITHUB BUTTON*/
-/**************************************************************************/
-
-/*Hides the default Bootstrap button*/
 #logo {
   display:none;
 }
 
-/*Controls spacing around the GitHub button*/
 .github-logo2{
   height: 58px;
 }
 
-/*Sets style for the the dark and light versions of the GitHub buttons*/
 .github-logo, .github-logo-light{
   background-color: #000000;
   border: none;
@@ -292,13 +210,11 @@ site and for the contact form submit button.*/
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
-/*Overrides button colors defined above to create a lighter version*/
 .github-logo-light{
   background-color: #FFFFFF;
   color: #000000;
 }
 
-/*Styles and positions the GitHub icon within the button*/
 .fab {
   font-size: 35px;
   position: absolute;
@@ -307,7 +223,6 @@ site and for the contact form submit button.*/
   transform: translate(-50%, -50%);
 }
 
-/*Styles and positions the text within the button*/
 .github-logo>span, .github-logo-light>span {
   font-size: 16px;
   position: absolute;
@@ -316,17 +231,11 @@ site and for the contact form submit button.*/
   transform: translate(-50%, 50%);
 }
 
-/*Sets hover effects for the both color versions of the button*/
 .github-logo:hover, .github-logo-light:hover {
   background: #9AC4E8;
   color: #000000;
 }
 
-/**************************************************************************/
-/*ICONS*/
-/**************************************************************************/
-
-/*Hides the default bootstrap button for each icon*/
 #icon-label1, #icon-label2, #icon-label3,
 #icon-label4, #icon-label5, #icon-label6,
 #icon-label7, #icon-label8, #icon-label9,
@@ -334,79 +243,61 @@ site and for the contact form submit button.*/
   display:none;
 }
 
-/*Sets the image and background color for each icon. Background color is
-set to match solid tiles to preserve color on hover effect. Id's named
-after each logo to avoid manual updates as skills are added to the
-database*/
-
-/*HTML5*/
 #ht5-id {
   background-image: url(html5_45.png);
   background-color: #FFFFFF;
 }
 
-/*GitHub*/
 #gh-id {
   background-image: url(github_60.png);
   background-color: #000000;
 }
 
-/*Git*/
 #git-id {
   background-image: url(git_45.png);
   background-color: #FFFFFF;
 }
 
-/*PyCharm*/
 #pc-id {
   background-image: url(pc_45.png);
   background-color: #FFFFFF;
 }
 
-/*Bootstrap*/
 #bst-id {
   background-image: url(bst_55.png);
   background-color: #7952B3;
 }
 
-/*Python*/
 #pyt-id {
   background-image: url(pyt_45.png);
   background-color: #FFFFFF;
 }
 
-/*Django*/
 #dj-id {
   background-image: url(dj_45.png);
   background-color: #092E20;
 }
 
-/*Amazon Web Services*/
 #aws-id {
   background-image: url(aws_55.png);
   background-color: #232F3F;
 }
 
-/*CSS3*/
 #c3-id {
   background-image: url(css3_45.png);
   background-color: #FFFFFF;
 }
 
-/*Microsoft Visual Studio Code*/
 #vs-id {
   background-image: url(vs_55.png);
   background-color: #FFFFFF;
 }
 
-/*Styles the container holding the icons. Size is set to contain the
-larger tile on hover.*/
 .box{
   height: 150px;
   width: 150px;
 }
 
-/*Styles the tile inside the box*/
 .icon-logo{
   background-repeat: no-repeat;
   background-position: center;
@@ -417,18 +308,12 @@ larger tile on hover.*/
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
-/*Sets hover effects for the tiles*/
 .icon-logo:hover {
   height: 125px;
   width: 100px;
   margin: 15px 10px;
 }
 
-/**************************************************************************/
-/*CONTACT ME PAGE*/
-/**************************************************************************/
-
-/*Adds custom styling to form fields*/
 #id_name, #id_sender, #id_subject, #id_message {
   background: #FFFFFF;
   border: none;
@@ -436,8 +321,6 @@ larger tile on hover.*/
   box-shadow: 0 6px 12px 0 rgba(0,0,0,0.2), 0 5px 15px 0 rgba(0,0,0,0.19);
 }
 
-/*Changes the color of Bootstrap's on-click blue outline for the form
-fields to match the hover color for the buttons*/
 #id_name:focus, #id_name:active,
 #id_sender:focus, #id_sender:active,
 #id_subject:focus, #id_subject:active,
@@ -445,8 +328,6 @@ fields to match the hover color for the buttons*/
   box-shadow: 0 0 0 0.2rem rgba(154, 196, 232, 0.7);
 }
 
-/*Styles and positions the background image for the contact success page.
-Sets it to cover the whole screen.*/
 .success-img {
   background-image:url(laptop1.jpg);
   color: #000000;
@@ -458,7 +339,6 @@ Sets it to cover the whole screen.*/
   padding:0 20px;
 }
 
-/*Styles the success text on the contact success page*/
 .stext {
     width:100%;
     text-align:center;
@@ -468,60 +348,38 @@ Sets it to cover the whole screen.*/
     text-transform:uppercase;
 }
 
-/*Creates background contrast for .stext above. rgb used to support older
-websites*/
 .contrast {
   background: rgb(255, 255, 255);
   background: rgba(255, 255, 255, 0.5);
 }
 
-/**************************************************************************/
-/*CHECKLIST PAGE*/
-/**************************************************************************/
-
-/*Sets checklist margin on the web checklist page and hides the default
-checklist button*/
 .check {
   padding-left: 1rem;
   list-style-type: none;
 }
 
-/*Sets margins for the text next to the checkbox and ensures that the text
-stays on the same line with the checkbox*/
 .check label {
   display : inline;
   padding-right : 4px;
 }
 
-/**************************************************************************/
-/*FOOTER*/
-/**************************************************************************/
-
-/*Sets footer size and color*/
 .footer {
   background: #000000;
   height: 100px;
 }
 
-/*Sets footer text color and centers it*/
 footer .footer-text {
   color: #FFFFFF;
   text-align: center;
 }
 
-/*Sets link text colors and centers them*/
 footer .footer-link {
   color: #FFFFFF;
   text-align: center;
 }
 
-/*Sets the hover effect for the link*/
 footer .footer-link:hover {
   color: #000000;
   text-decoration: none;
   background: rgba(255, 100, 0, 0.25);
 }
-
-/**************************************************************************/
-/*END*/
-/**************************************************************************/

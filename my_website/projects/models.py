@@ -2,13 +2,6 @@ from django.db import models
 from django.apps import apps
 
 
-# 'models.py' creates all the database entries. Database entries get passed
-# to 'views.py'. 'views.py' then renders the entries through template tags
-# into the html django templates.
-
-# Creates the 'Project' entry in the database. This stores all info about
-# each of my coding projects. 'index_key' is used to control display order
-# on the home page.
 class Project(models.Model):
     objects = None
     title = models.CharField(max_length=100)
@@ -22,7 +15,6 @@ class Project(models.Model):
         return self.title
 
 
-# Stores summary paragraphs for projects
 class ProjectSummary(models.Model):
     objects = None
     index_key = models.IntegerField()
@@ -34,8 +26,6 @@ class ProjectSummary(models.Model):
         return f'{self.project}, {self.header}'
 
 
-# Stores summary list items for projects, such as skills,
-# to do's, issues encountered, etc.
 class ProjectSummaryList(models.Model):
     objects = None
     index_key = models.IntegerField()
@@ -48,7 +38,6 @@ class ProjectSummaryList(models.Model):
         return self.name
 
 
-# Stores large bodies of text describing the projects
 class ProjectDescription(models.Model):
     objects = None
     index_key = models.IntegerField()
@@ -60,8 +49,6 @@ class ProjectDescription(models.Model):
         return f'{self.project}, {self.header}'
 
 
-# Stores project list items, such as skills,
-# to do's, issues encountered, etc.
 class ProjectDescriptionList(models.Model):
     objects = None
     index_key = models.IntegerField()
@@ -74,7 +61,6 @@ class ProjectDescriptionList(models.Model):
         return self.name
 
 
-# Stores all the checklist headers for the web development checklist page
 class CheckListHeader(models.Model):
     objects = None
     name = models.CharField(max_length=100)
@@ -84,7 +70,6 @@ class CheckListHeader(models.Model):
         return self.name
 
 
-# Stores all the checklist entries for the web development checklist page
 class CheckListEntry(models.Model):
     objects = None
     name = models.TextField()
@@ -96,7 +81,6 @@ class CheckListEntry(models.Model):
         return self.name
 
 
-# Model for storing sub headers, not currently used
 class SubHeader(models.Model):
     objects = None
     name = models.CharField(max_length=100)
@@ -108,7 +92,6 @@ class SubHeader(models.Model):
         return self.name
 
 
-# Reference link headers used on the checklist page. See project_checklist.html
 class LinkHeader(models.Model):
     objects = None
     name = models.CharField(max_length=100)
@@ -117,7 +100,6 @@ class LinkHeader(models.Model):
         return self.name
 
 
-# Reference links used on the checklist page. See project_checklist.html
 class RefLink(models.Model):
     objects = None
     name = models.TextField()
@@ -130,8 +112,6 @@ class RefLink(models.Model):
         return self.name
 
 
-# Enters me in the database. Currently unused in the frontend but left in for future
-# scaling if needed
 class PortfolioInfo(models.Model):
     objects = None
     name_first = models.CharField(max_length=100)
@@ -146,7 +126,6 @@ class PortfolioInfo(models.Model):
         return self.name_first
 
 
-# Stores my skills
 class PortfolioSkill(models.Model):
     objects = None
     skill = models.CharField(max_length=100)
