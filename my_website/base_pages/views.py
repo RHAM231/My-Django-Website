@@ -3,7 +3,6 @@ from django.apps import apps
 from . models import (Skill)
 
 
-# Renders the home page.
 # 'iconskills' pulls skills with their associated pictures from the database
 # 'projects' renders projects from the database
 def home(request):
