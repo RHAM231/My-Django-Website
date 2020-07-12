@@ -31,7 +31,7 @@ The default generated app when the Django project was created. Controls admin fu
 Houses all logic for storing and rendering projects on my website.
 
 ### Checklist
-I implemented a checklist at the end of the development process to ensure a smooth deployment and an overall high quality project. It can be found [here](http://rexhmitchell.com).
+I implemented a checklist at the end of the development process to ensure a smooth deployment and an overall high quality project. It can be found [here](http://rexhmitchell.com/portfolio-project/project_checklist/).
 
 ### Style Guides
 The project is written following style guides for each language to the fullest extent possible. They are as follows:
