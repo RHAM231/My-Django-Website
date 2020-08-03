@@ -11,6 +11,10 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
+import json
+
+with open('/etc/config.json') as config_file:
+    config = json.load(config_file)
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -20,19 +24,20 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('PW_DJANGO_SECRET_KEY')
+SECRET_KEY = config['SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
-# SESSION_COOKIE_SECURE = True
-# CSRF_COOKIE_SECURE = True
-# SECURE_REFERRER_POLICY = 'no-referrer'
-# SECURE_SSL_REDIRECT = True
-# SECURE_HSTS_SECONDS = 60
-# SECURE_HSTS_PRELOAD = True
-# SECURE_HSTS_INCLUDE_SUBDOMAINS = True
-
-ALLOWED_HOSTS = ['*']
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
+SECURE_REFERRER_POLICY = 'same-origin'
+SECURE_BROWSER_XSS_FILTER = True
+SECURE_CONTENT_TYPE_NOSNIFF = True
+X_FRAME_OPTIONS = 'DENY'
+SECURE_HSTS_SECONDS = 2592000
+SECURE_HSTS_PRELOAD = True
+SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+ALLOWED_HOSTS = ['rexhmitchell.com', 'www.rexhmitchell.com']
 
 
 # Application definition
@@ -51,6 +56,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'csp.middleware.CSPMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -87,23 +93,23 @@ WSGI_APPLICATION = 'my_website.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
-
 # DATABASES = {
 #     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'TBD',
-#         'USER': 'TBD',
-#         'PASSWORD': 'TBD',
-#         'HOST': 'TBD',
-#         'PORT': '5432',
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
 #     }
 # }
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': config.get('DB_NAME'),
+        'USER': config.get('DB_USER'),
+        'PASSWORD': config.get('DB_PASS'),
+        'HOST': config.get('DB_HOST'),
+        'PORT': '5432',
+    }
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
@@ -147,6 +153,44 @@ STATIC_ROOT = os.path.join(BASE_DIR, "static/")
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
-EMAIL_HOST_USER = os.environ.get('PW_DJANGO_EMAIL')
-EMAIL_HOST_PASSWORD = os.environ.get('PW_DJANGO_EMAIL_PASS')
+EMAIL_HOST_USER = config.get('EMAIL_USER')
+EMAIL_HOST_PASSWORD = config.get('EMAIL_PASS')
 EMAIL_USE_TLS = True
+
+# Content Security Policy (CSP)
+# https://django-csp.readthedocs.io/en/latest/configuration.html
+CSP_DEFAULT_SRC = ["'none'"]
+CSP_SCRIPT_SRC = [
+    "https://stackpath.bootstrapcdn.com",
+    "https://cdn.jsdelivr.net",
+    "https://code.jquery.com"
+]
+CSP_STYLE_SRC = [
+    "https://stackpath.bootstrapcdn.com",
+    "'self'",
+    "'unsafe-inline'"
+]
+CSP_STYLE_SRC_ELEM = [
+    "https://use.fontawesome.com",
+    "https://fonts.googleapis.com",
+    "https://stackpath.bootstrapcdn.com",
+    "'self'"
+]
+CSP_IMG_SRC = ["'self'"]
+# CSP_MEDIA_SRC = ["'self'"]
+CSP_FRAME_SRC = ["'self'"]
+CSP_OBJECT_SRC = ["'self'"]
+CSP_FONT_SRC = [
+    "https://use.fontawesome.com",
+    "https://fonts.gstatic.com/s/merriweathersans/v11/2-c99IRs1JiJN1FRAMjTN5zd9vgsFHX7QjX78w.woff2",
+    "https://fonts.gstatic.com/s/merriweathersans/v11/2-c49IRs1JiJN1FRAMjTN5zd9vgsFH1OZyDK0hZmzA.woff2",
+    "https://fonts.gstatic.com/s/merriweathersans/v11/2-c99IRs1JiJN1FRAMjTN5zd9vgsFHX1QjU.woff2",
+    "https://fonts.gstatic.com/s/merriweathersans/v11/2-c49IRs1JiJN1FRAMjTN5zd9vgsFH1OZyDE0hY.woff2",
+]
+# When DEBUG is on we don't require HTTPS on our resources because in a local environment
+# we generally don't have access to HTTPS. However, when DEBUG is off, such as in our
+# production environment, we want all our resources to load over HTTPS
+CSP_UPGRADE_INSECURE_REQUESTS = not DEBUG
+# For roughly 60% of the requests to our django server we should include the report URI.
+# This helps keep down the number of CSP reports sent from client web browsers
+CSP_REPORT_PERCENTAGE = 0.6
