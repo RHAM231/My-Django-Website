@@ -15,7 +15,7 @@ class Project(models.Model):
     header = models.CharField(max_length=100)
     index_key = models.IntegerField()
     description = models.TextField()
-    image = models.ImageField(upload_to='images')
+    #image = models.ImageField(upload_to='images')
     link = models.TextField()
 
     def __str__(self):
