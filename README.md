@@ -52,7 +52,7 @@ Code is useless without liberal documentation. I include comments in all the sou
 
 # Security
 
-I take security seriously. My site scores an A on SecurityHeaders.com(https://securityheaders.com/?q=https%3A%2F%2Frexhmitchell.com%2F). In addition to the standard SSL certificate, I utilize Django's extensive built in security settings, Django-CSP, and AWS Security Groups.
+I take security seriously. My site scores an A on [SecurityHeaders.com](https://securityheaders.com/?q=https%3A%2F%2Frexhmitchell.com%2F). In addition to the standard SSL certificate which provides https access, I utilize Django's extensive built in security settings, Django-CSP, and AWS Security Groups.
 
 ### Django Security Settings
 
