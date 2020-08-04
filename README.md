@@ -50,6 +50,22 @@ The project is written following style guides for each language to the fullest e
 ### Comments
 Code is useless without liberal documentation. I include comments in all the source code, explaining what pieces of code are, what they do, and how they talk to other parts of the project. If customized code is needed, such as custom Django template tags, I explain that too.
 
+# Security
+
+I take security seriously. My site scores an A on SecurityHeaders.com(https://securityheaders.com/?q=https%3A%2F%2Frexhmitchell.com%2F). I utilize Django's extensive built in security settings, Django-CSP, and AWS Security Groups.
+
+## Django Security Settings
+
+I use Django's settings to easily provide Strict-Transport-Security, X-Frame-Options, a Referrer-Policy, X-Content-Type-Options, a Session Cookie, a CSRF token, and a Content Security Policy.
+
+## Django-CSP
+
+My content security policy
+
+## AWS Security Groups
+
+## 
+
 # Build Status
 
 Deployed. Projects being added.
