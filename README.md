@@ -60,7 +60,7 @@ I use Django's settings to easily provide Strict-Transport-Security, X-Frame-Opt
 
 ### Django-CSP
 
-My content security policy uses Django-CSP. I customize eight of the twenty four settings to ensure that only the necessary content will display on my site. This protects the site from 
+My content security policy uses Django-CSP. I customize eight of the twenty four settings to ensure that only the necessary content will display on my site. This helps further protect the site from different types of content injection such as XSS, and clickjacking.
 
 ### AWS Security Groups
 
