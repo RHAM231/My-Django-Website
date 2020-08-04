@@ -52,27 +52,27 @@ Code is useless without liberal documentation. I include comments in all the sou
 
 # Security
 
-I take security seriously. My site scores an A on SecurityHeaders.com(https://securityheaders.com/?q=https%3A%2F%2Frexhmitchell.com%2F). I utilize Django's extensive built in security settings, Django-CSP, and AWS Security Groups.
+I take security seriously. My site scores an A on SecurityHeaders.com(https://securityheaders.com/?q=https%3A%2F%2Frexhmitchell.com%2F). In addition to the standard SSL certificate, I utilize Django's extensive built in security settings, Django-CSP, and AWS Security Groups.
 
-## Django Security Settings
+### Django Security Settings
 
-I use Django's settings to easily provide Strict-Transport-Security, X-Frame-Options, a Referrer-Policy, X-Content-Type-Options, a Session Cookie, a CSRF token, and a Content Security Policy.
+I use Django's settings to easily provide Strict-Transport-Security, X-Frame-Options, a Referrer-Policy, X-Content-Type-Options, a Session Cookie, a CSRF token, and a Content Security Policy. All sensitive information such as secret keys, passwords, and usernames are protected using a config file.
 
-## Django-CSP
+### Django-CSP
 
-My content security policy
+My content security policy uses Django-CSP. I customize eight of the twenty four settings to ensure that only the necessary content will display on my site. This protects the site from 
 
-## AWS Security Groups
+### AWS Security Groups
 
-## 
+I use AWS's security group settings to restrict access to my server resources. Only IP addresses I designate can access the backend of the server and the database.
 
 # Build Status
 
 Deployed. Projects being added.
 
-# Languages/Frameworks Used
+# Languages/Frameworks/Tools Used
 
-Python, Pycharm, Django, Bootstrap, HTML, CSS, AWS
+Python, Pycharm, Django, Bootstrap, HTML, CSS, AWS, Apache2, Ubuntu, Postgres
 
 # License
 
