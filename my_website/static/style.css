@@ -330,7 +330,7 @@ site and for the contact form submit button.*/
 #icon-label1, #icon-label2, #icon-label3,
 #icon-label4, #icon-label5, #icon-label6,
 #icon-label7, #icon-label8, #icon-label9,
-#icon-label10 {
+#icon-label10, #icon-label11 {
   display:none;
 }
 
@@ -396,6 +396,12 @@ database*/
 /*Microsoft Visual Studio Code*/
 #vs-id {
   background-image: url(vs_55.png);
+  background-color: #FFFFFF;
+}
+
+/*Ubuntu*/
+#ubt-id {
+  background-image: url(ubt_45.png);
   background-color: #FFFFFF;
 }
 
