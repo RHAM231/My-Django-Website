@@ -240,7 +240,7 @@ a uniform hover color when pressed or clicked*/
 
 /*Sets default styling for all buttons that link to other pages on the
 site and for the contact form submit button.*/
-.link-btn, .frm-btn {
+.link-btn, .link-btn-light, .frm-btn {
   background-color: #000000;
   border: none;
   color: #FFFFFF;
@@ -253,8 +253,15 @@ site and for the contact form submit button.*/
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
+/*Overrides the dark color for the link button to create a lighter link
+button*/
+.link-btn-light {
+  background-color: #FFFFFF;
+  color: #000000;
+}
+
 /*Sets hover effects for the buttons*/
-.link-btn:hover, .frm-btn:hover {
+.link-btn:hover, .link-btn-light:hover, .frm-btn:hover {
   background-color: #9AC4E8;
   color: #FFFFFF;
   text-decoration: none;
@@ -316,7 +323,7 @@ site and for the contact form submit button.*/
   transform: translate(-50%, 50%);
 }
 
-/*Sets hover effects for the both color versions of the button*/
+/*Sets hover effects for both color versions of the button*/
 .github-logo:hover, .github-logo-light:hover {
   background: #9AC4E8;
   color: #000000;
