@@ -91,7 +91,7 @@ body, html {
 
 .pimgintro, .pimg1, .pimg2, .pimg3 {
   position:relative;
-  background-position:center;
+  background-position:absolute;
   background-size:cover;
   background-repeat:no-repeat;
   background-attachment:fixed;
