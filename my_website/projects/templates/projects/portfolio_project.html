@@ -76,7 +76,11 @@
           <p class="my-auto">{{ projectsummaries.0.paragraph }}
       </section>
     </div>
-<!--	Generates the headers and paragraphs from the database  -->
+<!--
+Generates the headers and paragraphs from the database.
+"|safe" is used at the end of item.paragraph to securely
+ render the checklist link from the database.
+-->
     {% for item in projectdescriptions %}
       <div class="row py-2"></div>
       <div class="row border-custom"></div>
