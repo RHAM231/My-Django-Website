@@ -56,7 +56,7 @@ I take security seriously. My site scores an A on [SecurityHeaders.com](https://
 
 ### Django Security Settings
 
-I use Django's settings to easily provide Strict-Transport-Security, X-Frame-Options, a Referrer-Policy, X-Content-Type-Options, a Session Cookie, a CSRF token, and a Content Security Policy. All sensitive information such as secret keys, passwords, and usernames are protected using a config file.
+I use Django's settings to easily provide Strict-Transport-Security, X-Frame-Options, a Referrer-Policy, X-Content-Type-Options, a Session Cookie, a CSRF token, and a Content-Security-Policy. All sensitive information such as secret keys, passwords, and usernames are protected using a config file.
 
 ### Django-CSP
 
