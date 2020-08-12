@@ -140,7 +140,7 @@ body, html {
 .ptext {
   width:100%;
   text-align:center;
-  color:#FFFFFF;
+  color:#000000;
   font-size:24px;
   letter-spacing:8px;
   text-transform:uppercase;
@@ -148,9 +148,15 @@ body, html {
 
 .ptext-sub {
   text-align:center;
-  color:#FFFFFF;
+  color:#000000;
   font-size:18px;
   letter-spacing:2px;
+}
+
+@media(max-width:568px){
+  .pimgintro, .pimg1, .pimg2, .pimg3 {
+    background-attachment:scroll;
+  }
 }
 
 .project-link {
