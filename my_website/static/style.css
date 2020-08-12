@@ -140,7 +140,7 @@ a uniform hover color when pressed or clicked*/
 /*Sets global styles and position for all parallax images on the home page*/
 .pimgintro, .pimg1, .pimg2, .pimg3 {
   position:relative;
-  background-position:absolute;
+  background-position:center;
   background-size:cover;
   background-repeat:no-repeat;
   background-attachment:fixed;
@@ -148,7 +148,7 @@ a uniform hover color when pressed or clicked*/
 
 /*Sets the image and size for main home page image*/
 .pimgintro {
-  background-image:url(computer1.jpg);
+  background-image:url(comp1.jpg);
   min-height: 600px;
 }
 
@@ -212,11 +212,11 @@ a uniform hover color when pressed or clicked*/
   letter-spacing:2px;
 }
 
-/*@media(max-width:568px){
-  .pimg1, .pimg2, .pimg3 {
+@media(max-width:568px){
+  .pimgintro, .pimg1, .pimg2, .pimg3 {
     background-attachment:scroll;
   }
-}*/
+}
 
 /*Styles the link text on top of each project image*/
 .project-link {
