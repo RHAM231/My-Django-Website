@@ -91,14 +91,14 @@ body, html {
 
 .pimgintro, .pimg1, .pimg2, .pimg3 {
   position:relative;
-  background-position:absolute;
+  background-position:center;
   background-size:cover;
   background-repeat:no-repeat;
   background-attachment:fixed;
 }
 
 .pimgintro {
-  background-image:url(computer1.jpg);
+  background-image:url(comp1.jpg);
   min-height: 600px;
 }
 
