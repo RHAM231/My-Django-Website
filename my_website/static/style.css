@@ -198,7 +198,7 @@ a uniform hover color when pressed or clicked*/
 .ptext {
   width:100%;
   text-align:center;
-  color:#FFFFFF;
+  color:#000000;
   font-size:24px;
   letter-spacing:8px;
   text-transform:uppercase;
@@ -207,7 +207,7 @@ a uniform hover color when pressed or clicked*/
 /*Styles the sub-header text shown on top of the main parallax image*/
 .ptext-sub {
   text-align:center;
-  color:#FFFFFF;
+  color:#000000;
   font-size:18px;
   letter-spacing:2px;
 }
