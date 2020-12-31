@@ -76,4 +76,4 @@ Python, Pycharm, Django, Bootstrap, HTML, CSS, AWS, Apache2, Ubuntu, Postgres
 
 # License
 
-Copyright 2020 © Rex Mitchell
+Copyright 2021 © Rex Mitchell
