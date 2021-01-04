@@ -66,6 +66,10 @@ My content security policy uses Django-CSP. I customize eight of the twenty four
 
 I use AWS's security group settings to restrict access to my server resources. Only IP addresses I designate can access the backend of the server and the database.
 
+# Deployment
+
+Read about my deployment method [here]
+
 # Build Status
 
 Deployed. Projects being added.
