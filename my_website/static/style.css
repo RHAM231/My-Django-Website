@@ -55,6 +55,11 @@ body, html {
   background: #000000;
   margin-top: 0;
   padding:0px;
+  position: -webkit-sticky;
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: 9;
 }
 
 /*Style and position the logo*/
