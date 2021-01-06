@@ -66,6 +66,10 @@ My content security policy uses Django-CSP. I customize eight of the twenty four
 
 I use AWS's security group settings to restrict access to my server resources. Only IP addresses I designate can access the backend of the server and the database.
 
+# Deployment
+
+Read about my deployment method [here]
+
 # Build Status
 
 Deployed. Projects being added.
@@ -76,4 +80,4 @@ Python, Pycharm, Django, Bootstrap, HTML, CSS, AWS, Apache2, Ubuntu, Postgres
 
 # License
 
-Copyright 2020 © Rex Mitchell
+Copyright 2021 © Rex Mitchell
