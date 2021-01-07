@@ -170,8 +170,8 @@ a uniform hover color when pressed or clicked*/
 
 /*Sets the image for project 2*/
 .pimg2 {
-  background-image:url(medical.jpg);
-  min-height: 400px;
+  background-image:url(mt.jpg);
+  min-height: 700px;
 }
 
 /*Sets the image for project 3*/
