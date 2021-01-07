@@ -1,6 +1,6 @@
 # My Django Website
 
-This is the code for my portfolio website where I showcase my projects. To get back to my site go [here].
+This is the code for my portfolio website where I showcase my projects.
 
 # Motivation
 
@@ -81,3 +81,7 @@ Python, Pycharm, Django, Bootstrap, HTML, CSS, AWS, Apache2, Ubuntu, Postgres
 # License
 
 Copyright 2021 © Rex Mitchell
+
+# Visit or Return to My Site
+
+link
