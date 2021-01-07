@@ -1,6 +1,6 @@
 # My Django Website
 
-This is the code for my portfolio website where I showcase my projects.
+This is the code for my portfolio website where I showcase my projects. To get back to my site go [here].
 
 # Motivation
 
