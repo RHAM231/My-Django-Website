@@ -48,20 +48,30 @@
 </section>
 
 {% for project in projects %}
-  <div class="pimg{{ forloop.counter }}">
-    <div class="ptext align-middle">
-<!--    <span class="align-middle">-->
-<!--    <a href="{% url project.link %}" class="project-link">{{ project.title }}</a>-->
-<!--    </span>-->
-    </div>
-  </div>
+  {% if 'Hope Medical' in project.title %}
+  <div class="pimg{{ forloop.counter }}"></div>
+  <section class="section section-light">
+    <h2><a href="{{ project.link }}" class="project-link">{{ project.header }}</a></h2>
+    <p>
+      {{ project.description }}
+      <a href="{{ project.link }}" class="">here</a>.
+    </p>
+    <a class="github-logo2" href="https://github.com/RHAM231/HMWA">
+    <input type="button" name="" id="logo2"><label class="github-logo" for="logo2">
+      <span>GitHub</span>
+      <i class="fab fa-github"></i>
+    </label></a>
+  </section>
+  {% else %}
+  <div class="pimg{{ forloop.counter }}"></div>
   <section class="section section-light">
     <h2><a href="{% url project.link %}" class="project-link">{{ project.header }}</a></h2>
     <p>
-	    {{ project.description }}
-	    <a href="{% url project.link %}" class="">here</a>.
+      {{ project.description }}
+      <a href="{% url project.link %}" class="">here</a>.
     </p>
   </section>
+  {% endif %}
 {% endfor %}
 
 <div class="pimgintro">
