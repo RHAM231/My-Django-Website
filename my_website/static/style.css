@@ -170,7 +170,7 @@ a uniform hover color when pressed or clicked*/
 
 /*Sets the image for project 2*/
 .pimg2 {
-  background-image:url(HMWA1.PNG);
+  background-image:url(medical.jpg);
   min-height: 400px;
 }
 
@@ -283,7 +283,7 @@ button*/
 /**************************************************************************/
 
 /*Hides the default Bootstrap button*/
-#logo {
+#logo, #logo2 {
   display:none;
 }
 
