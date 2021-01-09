@@ -181,6 +181,8 @@ CSP_IMG_SRC = ["'self'"]
 CSP_FRAME_SRC = ["'self'"]
 CSP_OBJECT_SRC = ["'self'"]
 CSP_FONT_SRC = [
+    "'self'",
+    "fonts.gstatic.com",
     "https://use.fontawesome.com",
     "https://fonts.gstatic.com/s/merriweathersans/v11/2-c99IRs1JiJN1FRAMjTN5zd9vgsFHX7QjX78w.woff2",
     "https://fonts.gstatic.com/s/merriweathersans/v11/2-c49IRs1JiJN1FRAMjTN5zd9vgsFH1OZyDK0hZmzA.woff2",
