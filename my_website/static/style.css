@@ -463,19 +463,6 @@ fields to match the hover color for the buttons*/
   box-shadow: 0 0 0 0.2rem rgba(154, 196, 232, 0.7);
 }
 
-/*Styles and positions the background image for the contact success page.
-Sets it to cover the whole screen.*/
-.success-img {
-  background-image:url(laptop1.jpg);
-  color: #000000;
-  background-size:cover;
-  background-position:center;
-  height:100vh;
-  display:flex;
-  flex-direction:column;
-  padding:0 20px;
-}
-
 /*Styles the success text on the contact success page*/
 .stext {
     width:100%;
