@@ -349,17 +349,6 @@ body, html {
   box-shadow: 0 0 0 0.2rem rgba(154, 196, 232, 0.7);
 }
 
-.success-img {
-  background-image:url(laptop1.jpg);
-  color: #000000;
-  background-size:cover;
-  background-position:center;
-  height:100vh;
-  display:flex;
-  flex-direction:column;
-  padding:0 20px;
-}
-
 .stext {
     width:100%;
     text-align:center;
