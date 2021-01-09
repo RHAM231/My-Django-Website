@@ -342,7 +342,7 @@ button*/
 #icon-label1, #icon-label2, #icon-label3,
 #icon-label4, #icon-label5, #icon-label6,
 #icon-label7, #icon-label8, #icon-label9,
-#icon-label10, #icon-label11 {
+#icon-label10, #icon-label11, #icon-label12 {
   display:none;
 }
 
@@ -350,6 +350,12 @@ button*/
 set to match solid tiles to preserve color on hover effect. Id's named
 after each logo to avoid manual updates as skills are added to the
 database*/
+
+/*JavaScript*/
+#js-id {
+  background-image: url(js_55.png);
+  background-color: #F0DB4F;
+}
 
 /*HTML5*/
 #ht5-id {
