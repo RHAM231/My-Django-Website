@@ -239,6 +239,12 @@ a uniform hover color when pressed or clicked*/
   background: rgba(100, 100, 100, 0.75);
 }
 
+.it-section {
+  height: 400px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
 .bug-circle {
   background: #000000;
   width: 200px;
