@@ -86,7 +86,7 @@ body, html {
 /*Sets hover effects for the navbar links, logo, toggler, and drop down
 items*/
 .nav-link:hover, .navbar-brand:hover,
-.fas:hover, .dropdown-item:hover{
+.icon:hover, .dropdown-item:hover{
   color: #000000;
   background: #9AC4E8;
 }
@@ -117,7 +117,7 @@ a uniform hover color when pressed or clicked*/
 }
 
 /*Styles the toggler icon for the navbar*/
-.fas{
+.icon{
   background: #000000;
   font-size: 24px;
   line-height: 56px;
@@ -237,6 +237,20 @@ a uniform hover color when pressed or clicked*/
   color: #FFFFFF;
   text-decoration: none;
   background: rgba(100, 100, 100, 0.75);
+}
+
+.bug-circle {
+  background: #000000;
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+}
+
+/*Style the issue tracker icons on the home page*/
+.it-icon {
+  line-height: 100px;
+  color: #0275D8;
+  font-size: 100px;
 }
 
 /**************************************************************************/
