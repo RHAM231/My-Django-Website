@@ -239,14 +239,31 @@ a uniform hover color when pressed or clicked*/
   background: rgba(100, 100, 100, 0.75);
 }
 
-.it-section {
-  height: 400px;
-  padding-top: 100px;
-  padding-bottom: 100px;
+.hm-img {
+  border-radius: 150px;
 }
 
-.bug-circle {
-  background: #000000;
+.hm-title {
+  font-size: 24px;
+}
+
+.it-section {
+  height: 400px;
+  padding-top: 75px;
+  padding-bottom: 75px;
+}
+
+.blue-circle {
+  background: #0275D8;
+  width: 250px;
+  height: 250px;
+  border-radius: 125px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.white-circle {
+  background: #FFFFFF;
   width: 200px;
   height: 200px;
   border-radius: 100px;

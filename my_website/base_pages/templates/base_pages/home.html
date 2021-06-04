@@ -59,13 +59,34 @@ database generates them when passing the links to the template as a text string.
 <!-- Check to render project link differently -->
   {% if 'Hope Medical' or 'Django Issue Tracker' in project.title %}
     {% if 'Hope Medical' in project.title %}
-    <div class="pimg{{ forloop.counter }}"></div>
-    {% elif 'Django Issue Tracker' in project.title %}
-      <div class="it-section row my-5 justify-content-center d-flex">
-        <div class="bug-circle justify-content-center d-flex">
-          <i class="my-5 mx-3 it-icon fas fa-bug"></i>
+      <div class="section">
+        <div class="row my-2 justify-content-center d-flex">
+          <div class="mb-3 justify-content-center d-flex">
+            <img class="hm-img" src="{% static 'bear.jpg' %}" alt="HTML5" style="width:100%">
+          </div>
+        </div>
+        <div class="row my-2 justify-content-center d-flex">
+          <p class="text-center">
+            <a class="hm-title"><b>Hope Medical</b></a><br>
+            <a><b>Rich Parker, Executive Director</b></a>
+          </p>
+        </div>
+        <div class="row my-2 justify-content-center d-flex">
+          <p class="text-center">
+            <a>"{% lorem %}"</a>
+          </p>
         </div>
       </div>
+    {% elif 'Django Issue Tracker' in project.title %}
+      <div class="it-section row my-2 justify-content-center d-flex">
+        <div class="blue-circle justify-content-center d-flex">
+          <div class="white-circle justify-content-center d-flex">
+            <i class="my-5 mx-3 it-icon fas fa-bug"></i>
+          </div>
+        </div>
+      </div>
+    {% else %}
+      <div class="pimg{{ forloop.counter }}"></div>
     {% endif %}
     <section class="section section-light">
       <h2><a href="{{ project.link }}" class="project-link">{{ project.header }}</a></h2>
