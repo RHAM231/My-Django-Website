@@ -176,7 +176,7 @@ a uniform hover color when pressed or clicked*/
 
 /*Sets the image for project 3*/
 .pimg3 {
-  background-image:url(proj3-TBD.jpg);
+  background-image:url(laptop2.jpg);
   min-height: 400px;
 }
 
@@ -238,6 +238,7 @@ a uniform hover color when pressed or clicked*/
   text-decoration: none;
   background: rgba(100, 100, 100, 0.75);
 }
+
 
 .hm-img {
   border-radius: 150px;
@@ -379,7 +380,8 @@ button*/
 #icon-label1, #icon-label2, #icon-label3,
 #icon-label4, #icon-label5, #icon-label6,
 #icon-label7, #icon-label8, #icon-label9,
-#icon-label10, #icon-label11, #icon-label12 {
+#icon-label10, #icon-label11, #icon-label12,
+#icon-label13 {
   display:none;
 }
 
@@ -457,6 +459,12 @@ database*/
 /*Ubuntu*/
 #ubt-id {
   background-image: url(ubt_45.png);
+  background-color: #FFFFFF;
+}
+
+/*Django Rest*/
+#dr-id {
+  background-image: url(dr_80.png);
   background-color: #FFFFFF;
 }
 
