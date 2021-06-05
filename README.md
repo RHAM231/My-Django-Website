@@ -68,7 +68,7 @@ I use AWS's security group settings to restrict access to my server resources. O
 
 # Deployment
 
-Read about my deployment method [here]
+Read about my deployment methods [here](https://github.com/RHAM231/HMWA#deployment) or [here](https://github.com/RHAM231/GitHub-Issue-Backend#deployment).
 
 # Build Status
 
