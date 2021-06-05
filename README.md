@@ -1,6 +1,6 @@
 # My Django Website
 
-This is the code for my portfolio website where I showcase my projects.
+This is the code for my portfolio website where I showcase my projects. ([Return to my site](https://rexhmitchell.com/))
 
 # Motivation
 
@@ -52,7 +52,7 @@ Code is useless without liberal documentation. I include comments in all the sou
 
 # Security
 
-I take security seriously. My site scores an A on [SecurityHeaders.com](https://securityheaders.com/?q=https%3A%2F%2Frexhmitchell.com%2F). In addition to the standard SSL certificate which provides https access, I utilize Django's extensive built in security settings, Django-CSP, and AWS Security Groups.
+My site scores an A on [SecurityHeaders.com](https://securityheaders.com/?q=https%3A%2F%2Frexhmitchell.com%2F). In addition to the standard SSL certificate which provides https access, I utilize Django's extensive built in security settings, Django-CSP, and AWS Security Groups.
 
 ### Django Security Settings
 
@@ -68,7 +68,7 @@ I use AWS's security group settings to restrict access to my server resources. O
 
 # Deployment
 
-Read about my deployment method [here]
+Read about my deployment methods [here](https://github.com/RHAM231/HMWA#deployment) (Hope Medical) or [here](https://github.com/RHAM231/GitHub-Issue-Backend#deployment) (Issue Tracker).
 
 # Build Status
 
@@ -84,4 +84,4 @@ Copyright 2021 © Rex Mitchell
 
 # Visit or Return to My Site
 
-link
+[rexhmitchell.com](https://rexhmitchell.com/)
