@@ -68,7 +68,7 @@ I use AWS's security group settings to restrict access to my server resources. O
 
 # Deployment
 
-Read about my deployment methods [here](https://github.com/RHAM231/HMWA#deployment) (Hope Medical) or [here](https://github.com/RHAM231/GitHub-Issue-Backend#deployment) (Issue Tracker.
+Read about my deployment methods [here](https://github.com/RHAM231/HMWA#deployment) (Hope Medical) or [here](https://github.com/RHAM231/GitHub-Issue-Backend#deployment) (Issue Tracker).
 
 # Build Status
 
