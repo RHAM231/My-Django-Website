@@ -21,27 +21,40 @@ def contact_me(request):
                 'email': form.cleaned_data['sender'],
                 'message': form.cleaned_data['message'],
             }
-            # Pass context into the template and convert it to be email friendly.
-            # We use strip_tags as a backup to render the template in non-html
-            # capable browsers.
-            html_content = render_to_string('contact/contact_email.html', email_context)
+            # Pass context into the template and convert it to be email
+            # friendly. We use strip_tags as a backup to render the
+            # template in non-html capable browsers.
+            html_content = render_to_string(
+                'contact/contact_email.html',
+                email_context
+            )
             plain_message = strip_tags(html_content)
             from_email = form.cleaned_data['sender']
             cc_myself = form.cleaned_data['cc_myself']
             recipients = ['nogardjmj@gmail.com']
-            # If the the checkbox is checked, add the form user to the list of email
-            # recipients.
+            # If the the checkbox is checked, add the form user to the
+            # list of email recipients.
             if cc_myself:
                 recipients.append(from_email)
-            # Call django's send mail function and pass everything we just created
+            # Call django's send mail function and pass everything we
+            # just created
             send_mail(subject, plain_message, from_email, recipients,
                       fail_silently=False, html_message=html_content)
 
             # If the form was submitted successfully, render the success page.
-            return render(request, 'contact/contact_form_success.html', {'title': 'Contact'})
+            return render(
+                request,
+                'contact/contact_form_success.html',
+                {'title': 'Contact'}
+            )
 
-    # Otherwise, set form to equal the empty form. Django handles error messages automatically.
+    # Otherwise, set form to equal the empty form. Django handles error
+    # messages automatically.
     else:
         form = ContactForm()
 
-    return render(request, 'contact/contact_form.html', {'form': form, 'title': 'Contact'})
+    return render(
+        request,
+        'contact/contact_form.html',
+        {'form': form, 'title': 'Contact'}
+    )

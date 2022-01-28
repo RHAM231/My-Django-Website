@@ -3,11 +3,14 @@ from django.apps import apps
 from . models import (Skill)
 
 
-# Renders the home page.
-# 'iconskills' pulls skills with their associated pictures from the database
-# 'projects' renders projects from the database
+'''
+Renders the home page. 'iconskills' pulls skills with their 
+associated pictures from the database. 'projects' renders projects
+from the database
+'''
 def home(request):
-    # Let's load the 'Project' model from the base_pages app and pass it into context
+    # Let's load the 'Project' model from the base_pages app and pass
+    # it into context
     Project = apps.get_model('projects', 'Project')
     context = {
         'iconskills': Skill.objects.all(),
