@@ -35,7 +35,8 @@ def project3(request):
     return render(request, 'projects/project3.html', {'title': 'Projects'})
 
 
-# Renders the checklist page. Entries and headers are stored in the database
+# Renders the checklist page. Entries and headers are stored in the
+# database
 def checklist(request):
     context = {
         'headers': CheckListHeader.objects.all().order_by('indexkey'),

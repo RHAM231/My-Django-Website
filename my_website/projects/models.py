@@ -2,13 +2,16 @@ from django.db import models
 from django.apps import apps
 
 
-# 'models.py' creates all the database entries. Database entries get passed
-# to 'views.py'. 'views.py' then renders the entries through template tags
-# into the html django templates.
+'''
+'models.py' creates all the database entries. Database entries get
+passed to 'views.py'. 'views.py' then renders the entries through 
+template tags into the html django templates.
+'''
 
-# Creates the 'Project' entry in the database. This stores all info about
-# each of my coding projects. 'index_key' is used to control display order
-# on the home page.
+
+# Creates the 'Project' entry in the database. This stores all info
+# about each of my coding projects. 'index_key' is used to control
+# display order on the home page.
 class Project(models.Model):
     objects = None
     title = models.CharField(max_length=100)
@@ -74,7 +77,8 @@ class ProjectDescriptionList(models.Model):
         return self.name
 
 
-# Stores all the checklist headers for the web development checklist page
+# Stores all the checklist headers for the web development checklist
+# page
 class CheckListHeader(models.Model):
     objects = None
     name = models.CharField(max_length=100)
@@ -84,7 +88,8 @@ class CheckListHeader(models.Model):
         return self.name
 
 
-# Stores all the checklist entries for the web development checklist page
+# Stores all the checklist entries for the web development checklist
+# page
 class CheckListEntry(models.Model):
     objects = None
     name = models.TextField()
@@ -108,7 +113,8 @@ class SubHeader(models.Model):
         return self.name
 
 
-# Reference link headers used on the checklist page. See project_checklist.html
+# Reference link headers used on the checklist page. See
+# project_checklist.html
 class LinkHeader(models.Model):
     objects = None
     name = models.CharField(max_length=100)
@@ -117,7 +123,8 @@ class LinkHeader(models.Model):
         return self.name
 
 
-# Reference links used on the checklist page. See project_checklist.html
+# Reference links used on the checklist page. See
+# project_checklist.html
 class RefLink(models.Model):
     objects = None
     name = models.TextField()
@@ -130,8 +137,8 @@ class RefLink(models.Model):
         return self.name
 
 
-# Enters me in the database. Currently unused in the frontend but left in for future
-# scaling if needed
+# Enters me in the database. Currently unused in the frontend but left
+# in for future scaling if needed
 class PortfolioInfo(models.Model):
     objects = None
     name_first = models.CharField(max_length=100)
