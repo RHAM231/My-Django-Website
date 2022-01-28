@@ -28,7 +28,7 @@ def contact_me(request):
             plain_message = strip_tags(html_content)
             from_email = form.cleaned_data['sender']
             cc_myself = form.cleaned_data['cc_myself']
-            recipients = ['rex.ha.mitchell@gmail.com']
+            recipients = ['nogardjmj@gmail.com']
             # If the the checkbox is checked, add the form user to the list of email
             # recipients.
             if cc_myself:
