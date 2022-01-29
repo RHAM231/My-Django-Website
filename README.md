@@ -1,6 +1,6 @@
 # My Django Website
 
-This is the code for my portfolio website where I showcase my projects. ([Return to my site](https://rexhmitchell.com/))
+This is the code for my portfolio website where I showcase my projects. ([Visit my site](https://rexhmitchell.com/))
 
 # Motivation
 
