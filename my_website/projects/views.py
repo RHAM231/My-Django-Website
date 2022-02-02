@@ -16,10 +16,14 @@ from . models import (
 # The lists and bodies of texts are all stored in the database.
 def portfolio_project(request):
     context = {
-        'projectsummaries': ProjectSummary.objects.all().order_by('index_key'),
-        'projectsumlists': ProjectSummaryList.objects.all().order_by('index_key'),
-        'projectdescriptions': ProjectDescription.objects.all().order_by('index_key'),
-        'projectdeslists': ProjectDescriptionList.objects.all().order_by('index_key'),
+        'projectsummaries':
+            ProjectSummary.objects.all().order_by('index_key'),
+        'projectsumlists':
+            ProjectSummaryList.objects.all().order_by('index_key'),
+        'projectdescriptions':
+            ProjectDescription.objects.all().order_by('index_key'),
+        'projectdeslists':
+            ProjectDescriptionList.objects.all().order_by('index_key'),
         'title': 'Projects'
     }
     return render(request, 'projects/portfolio_project.html', context)
