@@ -242,6 +242,8 @@ a uniform hover color when pressed or clicked*/
 
 .hm-img {
   border-radius: 150px;
+  height: 300px;
+  width: 300px;
 }
 
 .hm-title {
