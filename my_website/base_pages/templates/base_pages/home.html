@@ -48,28 +48,78 @@
 </section>
 
 {% for project in projects %}
-  {% if 'Hope Medical' in project.title %}
-  <div class="pimg{{ forloop.counter }}"></div>
-  <section class="section section-light">
-    <h2><a href="{{ project.link }}" class="project-link">{{ project.header }}</a></h2>
-    <p>
-      {{ project.description }}
-      <a href="{{ project.link }}" class="">here</a>.
-    </p>
-    <a class="github-logo2" href="https://github.com/RHAM231/HMWA">
-    <input type="button" name="" id="logo2"><label class="github-logo" for="logo2">
-      <span>GitHub</span>
-      <i class="fab fa-github"></i>
-    </label></a>
-  </section>
+<!-- Check to render project link differently -->
+  {% if 'Hope Medical' or 'Django Issue Tracker' in project.title %}
+    {% if 'Hope Medical' in project.title %}
+      <div class="section">
+        <div class="row my-2 justify-content-center d-flex">
+          <div class="mb-3 justify-content-center d-flex">
+            <img class="hm-img" src="{% static 'rich_parker.jpg' %}" alt="HTML5" style="width:100%">
+          </div>
+        </div>
+        <div class="row my-2 justify-content-center d-flex">
+          <p class="text-center">
+            <a class="hm-title"><b>Hope Medical</b></a><br>
+            <a><b>Rich Parker, Executive Director</b></a>
+          </p>
+        </div>
+        <div class="row my-2 justify-content-center d-flex">
+          <div class="col-lg-6 col-md-8 col-sm-12">
+            <p class="text-center">
+              <a>
+                "I highly recommend Rex Mitchell. Since he's updated our
+                website we've doubled both our online visits and the number
+                of clients visiting our facility. Minor website changes have
+                consistently been updated within one week. His service is
+                knowledgeable, helpful and professional."
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+    {% elif 'Django Issue Tracker' in project.title %}
+      <div class="it-section row my-2 justify-content-center d-flex">
+        <div class="blue-circle justify-content-center d-flex">
+          <div class="white-circle justify-content-center d-flex">
+            <i class="my-5 mx-3 it-icon fas fa-bug"></i>
+          </div>
+        </div>
+      </div>
+    {% else %}
+      <div class="pimg{{ forloop.counter }}"></div>
+    {% endif %}
+    <section class="section section-light">
+      <h2><a href="{{ project.link }}" class="project-link">{{ project.header }}</a></h2>
+      <div class="row my-2 justify-content-center d-flex">
+        <div class="col-lg-6 col-md-8 col-sm-12">
+          <p class="text-center">
+            {{ project.description }}
+            <a href="{{ project.link }}" class="">here</a>.
+          </p>
+        </div>
+      </div>
+      {% if 'Hope Medical' in project.title %}
+        <a class="github-logo2" href="https://github.com/RHAM231/HMWA"></a>
+      {% elif 'Django Issue Tracker' in project.title %}
+        <a class="github-logo2" href="https://github.com/RHAM231/GitHub-Issue-Backend">
+      {% endif %}
+      <input type="button" name="" id="logo2"><label class="github-logo" for="logo2">
+        <span>GitHub</span>
+        <i class="fab fa-github"></i>
+      </label></a>
+    </section>
   {% else %}
   <div class="pimg{{ forloop.counter }}"></div>
   <section class="section section-light">
     <h2><a href="{% url project.link %}" class="project-link">{{ project.header }}</a></h2>
-    <p>
-      {{ project.description }}
-      <a href="{% url project.link %}" class="">here</a>.
-    </p>
+    <div class="row my-2 justify-content-center d-flex">
+      <div class="col-lg-6 col-md-8 col-sm-12">
+        <p class="text-center">
+          {{ project.description }}
+          <a href="{% url project.link %}" class="">here</a>.
+        </p>
+      </div>
+    </div>
   </section>
   {% endif %}
 {% endfor %}
