@@ -323,7 +323,7 @@ button*/
 /**************************************************************************/
 
 /*Hides the default Bootstrap button*/
-#logo, #logo2 {
+#logo, #logo2, #logo-1, #logo-2, #logo-3 {
   display:none;
 }
 
