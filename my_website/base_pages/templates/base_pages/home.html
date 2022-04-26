@@ -1,9 +1,10 @@
-{% extends "base_pages/base.html" %}
+extends "base_pages/base.html" %}
 {% load static %}
 
 {% block content %}
 
 <div class="container-no-margin">
+
 
 <div class="pimgintro">
 <div class="container-parallax">
@@ -35,7 +36,7 @@
   <h2>Here's What I Know</h2>
   <div class="row d-flex justify-content-center py-2 px-2">
     {% for icon in iconskills %}
-      <a class="box" href="{{ icon.link }}">
+      <a class="box" id="box-{{ icon.icon_id }}" href="{{ icon.link }}">
       <input type="button"
              id="icon-label{{ forloop.counter }}">
       <label class="icon-logo"
@@ -48,13 +49,12 @@
 </section>
 
 {% for project in projects %}
-<!-- Check to render project link differently -->
   {% if 'Hope Medical' or 'Django Issue Tracker' in project.title %}
     {% if 'Hope Medical' in project.title %}
       <div class="section">
         <div class="row my-2 justify-content-center d-flex">
           <div class="mb-3 justify-content-center d-flex">
-            <img class="hm-img" src="{% static 'rich_parker.jpg' %}" alt="HTML5" style="width:100%">
+            <img class="hm-img" src="{% static 'rich_parker.jpg' %}" alt="HTML5">
           </div>
         </div>
         <div class="row my-2 justify-content-center d-flex">
@@ -99,11 +99,22 @@
         </div>
       </div>
       {% if 'Hope Medical' in project.title %}
-        <a class="github-logo2" href="https://github.com/RHAM231/HMWA"></a>
+        <a 
+          class="github-logo2" 
+          id="HM-btn-id" 
+          href="https://github.com/RHAM231/HMWA">
       {% elif 'Django Issue Tracker' in project.title %}
-        <a class="github-logo2" href="https://github.com/RHAM231/GitHub-Issue-Backend">
+        <a 
+          class="github-logo2" 
+          id="IT-btn-id" 
+          href="https://github.com/RHAM231/GitHub-Issue-Backend">
+      {% elif 'My Django Website' in project.title %}
+        <a 
+          class="github-logo2" 
+          id="MS-btn-id" 
+          href="https://github.com/RHAM231/My-Django-Website">
       {% endif %}
-      <input type="button" name="" id="logo2"><label class="github-logo" for="logo2">
+      <input type="button" name="" id="logo-{{ project.index_key }}"><label class="github-logo" for="logo-{{ project.index_key }}">
         <span>GitHub</span>
         <i class="fab fa-github"></i>
       </label></a>
@@ -129,7 +140,7 @@
   <div class="row py-5"></div>
   <div class="row d-flex justify-content-center py-3">
     <div class="ptext">
-    <span class="align-text-middle">See something you like?</span>
+      <span class="align-text-middle">See something you like?</span>
     </div>
   </div>
   <div class="row d-flex justify-content-center">
@@ -141,10 +152,12 @@
   </div>
   <div class="row d-flex justify-content-center">
     <a class="github-logo2" href="https://github.com/RHAM231">
-    <input type="button" name="" id="logo"><label class="github-logo-light" for="logo">
-      <span>GitHub</span>
-      <i class="fab fa-github"></i>
-    </label></a>
+      <input type="button" name="" id="logo">
+      <label class="github-logo-light" for="logo">
+        <span>GitHub</span>
+        <i class="fab fa-github"></i>
+      </label>
+    </a>
   </div>
 </div>
 </div>
