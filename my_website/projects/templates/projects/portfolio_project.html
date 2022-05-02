@@ -44,8 +44,12 @@
           to avoid a undesired hover effect with the link-->
           <div class="col-sm-12 col-md-4 col-lg-12">
           <div class="row py-2 justify-content-center">
-            <a class="github-logo2" href="https://github.com/RHAM231/My-Django-Website">
-            <input type="button" name="" id="logo"><label class="github-logo" for="logo">
+            <a 
+              class="github-logo2" 
+              id="github-btn-id" 
+              href="https://github.com/RHAM231/My-Django-Website">
+            <input type="button" name="" id="logo">
+            <label class="github-logo" for="logo">
               <span>Code</span>
               <i class="fab fa-github"></i>
             </label></a>
@@ -53,12 +57,22 @@
           </div>
           <div class="col-sm-12 col-md-4 col-lg-12">
           <div class="row py-2 justify-content-center">
-            <a href="{% url 'project_checklist' %}" class="link-btn">Checklist</a>
+            <a 
+              href="{% url 'project_checklist' %}" 
+              class="link-btn" 
+              id="checklist-btn-id">
+              Checklist
+            </a>
           </div>
           </div>
           <div class="col-sm-12 col-md-4 col-lg-12">
           <div class="row py-2 justify-content-center">
-            <a href="{% url 'contact_me' %}" class="link-btn">Contact Me</a>
+            <a 
+              href="{% url 'contact_me' %}" 
+              class="link-btn" 
+              id="contact-btn-id">
+              Contact Me
+            </a>
           </div>
           </div>
         </div>

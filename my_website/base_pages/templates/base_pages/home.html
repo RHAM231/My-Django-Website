@@ -102,7 +102,11 @@ database generates them when passing the links to the template as a text string.
         <div class="col-lg-6 col-md-8 col-sm-12">
           <p class="text-center">
             {{ project.description }}
-            <a href="{{ project.link }}" class="">here</a>.
+            <a 
+              href="{{ project.link }}" 
+              class="here-link" 
+              id="here-id-{{ project.index_key }}">
+              here</a>.
           </p>
         </div>
       </div>

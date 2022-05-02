@@ -28,12 +28,27 @@
 
   <h3>Useful Links</h3>
   <ul>
-    <li><a href="https://www.toptal.com/django/django-top-10-mistakes">
-      Top 10 Mistakes that Django Developers Make</a></li>
-    <li><a href="https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/">
-      Django Documentation: Deployment checklist</a></li>
-    <li><a href="https://css-tricks.com/strategies-for-cache-busting-css/">
-      Strategies for Cache-Busting CSS</a></li>
+    <li>
+        <a 
+        class="ref-link" 
+        href="https://www.toptal.com/django/django-top-10-mistakes">
+        Top 10 Mistakes that Django Developers Make
+      </a>
+    </li>
+    <li>
+      <a 
+        class="ref-link" 
+        href="https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/">
+        Django Documentation: Deployment checklist
+      </a>
+    </li>
+    <li>
+      <a 
+        class="ref-link" 
+        href="https://css-tricks.com/strategies-for-cache-busting-css/">
+        Strategies for Cache-Busting CSS
+      </a>
+    </li>
   </ul>
 
   <h3>Style Guides Used</h3>
@@ -44,7 +59,7 @@
       <h5>{{ header.name }}</h5>
       <ul class="">
       {% for item in header.link_key.all %}
-        <li><a href="{{ item.link }}">{{ item.name }}</a></li>
+        <li><a class="ref-link" href="{{ item.link }}">{{ item.name }}</a></li>
       {% empty %}
         No Entries
       {% endfor %}
