@@ -383,7 +383,7 @@ button*/
 #icon-label4, #icon-label5, #icon-label6,
 #icon-label7, #icon-label8, #icon-label9,
 #icon-label10, #icon-label11, #icon-label12,
-#icon-label13 {
+#icon-label13, #icon-label14 {
   display:none;
 }
 
@@ -468,6 +468,12 @@ database*/
 #dr-id {
   background-image: url(dr_80.png);
   background-color: #FFFFFF;
+}
+
+/*Docker*/
+#dk-id {
+  background-image: url(dk_100.png);
+  background-color: #2496EC;
 }
 
 /*Styles the container holding the icons. Size is set to contain the
