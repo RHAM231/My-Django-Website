@@ -358,6 +358,11 @@ body, html {
   background-color: #FFFFFF;
 }
 
+#dk-id {
+  background-image: url(dk_100.png);
+  background-color: #2496EC;
+}
+
 .box{
   height: 150px;
   width: 150px;
